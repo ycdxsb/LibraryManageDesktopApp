@@ -57,7 +57,8 @@ class BookStorageViewer(QWidget):
         self.jumpToLabel = QLabel("跳转到第")
         self.pageEdit = QLineEdit()
         self.pageEdit.setFixedWidth(30)
-        self.pageLabel = QLabel("页")
+        s = "/" + str(self.totalPage) + "页"
+        self.pageLabel = QLabel(s)
         self.jumpToButton = QPushButton("跳转")
         self.prevButton = QPushButton("前一页")
         self.prevButton.setFixedWidth(60)
@@ -104,6 +105,89 @@ class BookStorageViewer(QWidget):
         self.layout.addWidget(self.tableViewer)
         self.layout.addLayout(self.Hlayout2)
         self.setLayout(self.layout)
+        self.queryModel = QSqlQueryModel()
+        self.searchButtonClicked()
+        self.searchButton.clicked.connect(self.searchButtonClicked)
+        self.prevButton.clicked.connect(self.prevButtonClicked)
+        self.backButton.clicked.connect(self.backButtonClicked)
+        self.jumpToButton.clicked.connect(self.jumpToButtonClicked)
+
+    # 得到记录数
+    def getTotalRecordCount(self):
+        self.queryModel.setQuery("SELECT * FROM Book")
+        self.totalRecord = self.queryModel.rowCount()
+        return
+
+    # 得到总页数
+    def getPageCount(self):
+        self.getTotalRecordCount()
+        # 上取整
+        self.totalPage = (self.totalRecord + self.pageRecord - 1) / self.pageRecord
+        return
+
+    # 分页记录查询
+    def recordQuery(self, index):
+        queryCondition = ""
+        if (self.searchEdit.text() == ""):
+            queryCondition = ("SELECT * FROM Book limit %d,%d " % (index, self.pageRecord))
+            self.queryModel.setQuery(queryCondition)
+            return
+        conditionChoice = self.condisionComboBox.currentText()
+        if (conditionChoice == "按书名查询"):
+            conditionChoice = 'BookName'
+        elif (conditionChoice == "按书号查询"):
+            conditionChoice = 'BookId'
+        elif (conditionChoice == "按作者查询"):
+            conditionChoice = 'Auth'
+        elif (conditionChoice == '按分类查询'):
+            conditionChoice = 'Category'
+        else:
+            conditionChoice = 'publisher'
+        # 得到模糊查询条件
+        temp = self.searchEdit.text()
+        s = '%'
+        for i in range(0, len(temp)):
+            s = s + temp[i] + "%"
+        queryCondition = ("SELECT * FROM Book WHERE '%s' LIKE '%s' limit %d,%d " % (
+            conditionChoice, s, index, self.pageRecord))
+        self.queryModel.setQuery(queryCondition)
+        return
+
+    # 点击查询
+    def searchButtonClicked(self):
+        self.currentPage = 1
+        self.pageEdit.setText(str(self.currentPage))
+        self.getPageCount()
+        s = "/" + str(int(self.totalPage)) + "页"
+        self.pageLabel.setText(s)
+        index = (self.currentPage - 1) * self.pageRecord
+        self.recordQuery(index)
+        return
+
+    # 向前翻页
+    def prevButtonClicked(self):
+        self.currentPage -= 1
+        if (self.currentPage < 1):
+            self.currentPage = 1
+        index = (self.currentPage - 1) * self.pageRecord
+        self.recordQuery(index)
+        return
+
+    # 向后翻页
+    def backButtonClicked(self):
+        self.currentPage += 1
+        if (self.currentPage > self.totalPage):
+            self.currentPage = self.totalPage
+        index = (self.currentPage - 1) * self.pageRecord
+        self.recordQuery(index)
+        return
+
+    # 点击跳转
+    def jumpToButtonClicked(self):
+        self.currentPage = int(self.pageEdit.text())
+        index = (self.currentPage - 1) * self.pageRecord
+        self.recordQuery(index)
+        return
 
 
 if __name__ == "__main__":
