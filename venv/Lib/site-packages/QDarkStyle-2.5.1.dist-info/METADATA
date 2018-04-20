@@ -1,0 +1,68 @@
+Metadata-Version: 2.0
+Name: QDarkStyle
+Version: 2.5.1
+Summary: A dark stylesheet for Python and Qt applications
+Home-page: https://github.com/ColinDuquesnoy/QDarkStyleSheet
+Author: Colin Duquesnoy
+Author-email: colin.duquesnoy@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+
+QDarkStyle is a dark stylesheet for Python and Qt applications.
+
+This module provides a function to transparently load the stylesheets
+with the correct rc file.
+
+First, start importing our module
+
+.. code-block:: python
+
+    import qdarkstyle
+
+Then you can get stylesheet provided by QDarkStyle for various Qt wrappers
+as shown bellow
+
+.. code-block:: python
+
+    # PySide
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyside()
+    # PyQt4
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyqt()
+    # PyQt5
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
+
+Or from environment variables provided for QtPy or PyQtGraph, see
+
+.. code-block:: python
+
+    # QtPy
+    dark_stylesheet = qdarkstyle.load_stylesheet_from_environment()
+    # PyQtGraph
+    dark_stylesheet = qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph)
+
+Finally, set your QApplication with it
+
+.. code-block:: python
+
+    app.setStyleSheet(dark_stylesheet)
+
+Enjoy!
+
+
+
+
