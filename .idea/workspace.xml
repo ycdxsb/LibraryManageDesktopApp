@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54810fbf-eac4-4027-bd22-6f879414be51" name="Default" comment="finish dropBookDialog's bookIdEditChanged Event">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b3b09134-ee51-49dc-847d-b4524597a577.xml" afterPath="" />
+    <list default="true" id="54810fbf-eac4-4027-bd22-6f879414be51" name="Default" comment="finish dropBookDialog">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/db/LibraryManagement.db" afterPath="$PROJECT_DIR$/db/LibraryManagement.db" />
-      <change beforePath="$PROJECT_DIR$/dropBookDialog.py" afterPath="$PROJECT_DIR$/dropBookDialog.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,8 +84,8 @@
       <file leaf-file-name="dropBookDialog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dropBookDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+            <state relative-caret-position="378">
+              <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <marker date="1524325725821" expanded="true" signature="4214:4250" ph="SELECT * FRO... Book" />
@@ -401,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524321955098</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="finish dropBookDialog">
+      <created>1524325798866</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1524325798867</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -473,7 +477,8 @@
     <MESSAGE value="Merge branch 'master' of github.com:ycdxsb/LibraryManageDesktopApp&#10;finish StorageView" />
     <MESSAGE value="begin dropBookDialog and fixed some bugs" />
     <MESSAGE value="finish dropBookDialog's bookIdEditChanged Event" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish dropBookDialog's bookIdEditChanged Event" />
+    <MESSAGE value="finish dropBookDialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish dropBookDialog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -868,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dropBookDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        <state relative-caret-position="378">
+          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <marker date="1524325725821" expanded="true" signature="4214:4250" ph="SELECT * FRO... Book" />
