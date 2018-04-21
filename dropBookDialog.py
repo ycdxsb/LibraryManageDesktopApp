@@ -4,6 +4,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import qdarkstyle
 from PyQt5.QtSql import *
+import time
 
 
 class dropBookDialog(QDialog):
@@ -125,7 +126,34 @@ class dropBookDialog(QDialog):
         return
 
     def dropBookButtonClicked(self):
+        bookId = self.bookIdEdit.text()
+        dropNum = 0
+        if (self.dropNumEdit.text() == ""):
+            print(QMessageBox.warning(self, "警告", "淘汰数目为空，请检查输入，操作失败"), QMessageBox.Yes, QMessageBox.Yes)
+            return
+        dropNum = int(self.dropNumEdit.text())
+        db = QSqlDatabase.addDatabase("QSQLITE")
+        db.setDatabaseName('./db/LibraryManagement.db')
+        db.open()
+        query = QSqlQuery()
+        sql = "SELECT * FROM Book WHERE BookId='%s'" % (bookId)
+        query.exec_(sql)
+        if (query.next()):
+            if (dropNum > query.value(6) or dropNum < 0):
+                print(QMessageBox.warning(self, "警告", "库存数目为%d本，请检查输入" % (query.value(6)), QMessageBox.Yes,
+                                          QMessageBox.Yes))
+                return
+        # 更新Book表和BuyorDrop表
+        sql = "UPDATE BOOK SET NumStorage=NumStorage-%d,NumCanBorrow=NumCanBorrow-%d WHERE BookId='%s'" % (
+        dropNum, dropNum, bookId)
+        query.exec_(sql)
+        db.commit()
 
+        timenow = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+        sql = "INSERT INTO buyordrop VALUES ('%s','%s',0,%d)" % (bookId, timenow, dropNum)
+        query.exec_(sql)
+        db.commit()
+        print(QMessageBox.information(self, "提示", "淘汰书籍成功!", QMessageBox.Yes, QMessageBox.Yes))
         return
 
 
