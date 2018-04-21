@@ -167,8 +167,9 @@ class BookStorageViewer(QWidget):
     # 向前翻页
     def prevButtonClicked(self):
         self.currentPage -= 1
-        if (self.currentPage < 1):
+        if (self.currentPage <= 1):
             self.currentPage = 1
+        self.pageEdit.setText(str(self.currentPage))
         index = (self.currentPage - 1) * self.pageRecord
         self.recordQuery(index)
         return
@@ -176,8 +177,9 @@ class BookStorageViewer(QWidget):
     # 向后翻页
     def backButtonClicked(self):
         self.currentPage += 1
-        if (self.currentPage > self.totalPage):
-            self.currentPage = self.totalPage
+        if (self.currentPage >= int(self.totalPage)):
+            self.currentPage = int(self.totalPage)
+        self.pageEdit.setText(str(self.currentPage))
         index = (self.currentPage - 1) * self.pageRecord
         self.recordQuery(index)
         return
