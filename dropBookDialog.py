@@ -42,8 +42,7 @@ class dropBookDialog(QDialog):
         self.categoryComboBox = QComboBox()
         self.categoryComboBox.addItems(BookCategory)
         self.publisherEdit = QLineEdit()
-        self.publishTime = QDateTimeEdit()
-        self.publishTime.setDisplayFormat("yyyy-MM-dd")
+        self.publishTime = QLineEdit()
         # self.publishDateEdit = QLineEdit()
         self.dropNumEdit = QLineEdit()
 
@@ -79,9 +78,12 @@ class dropBookDialog(QDialog):
         self.dropNumLabel.setFont(font)
 
         self.bookNameEdit.setFont(font)
+        self.bookNameEdit.setReadOnly(True)
         self.bookIdEdit.setFont(font)
         self.authNameEdit.setFont(font)
+        self.authNameEdit.setReadOnly(True)
         self.publisherEdit.setFont(font)
+        self.publisherEdit.setReadOnly(True)
         self.publishTime.setFont(font)
         self.categoryComboBox.setFont(font)
         self.dropNumEdit.setFont(font)
@@ -97,6 +99,30 @@ class dropBookDialog(QDialog):
         self.layout.setVerticalSpacing(10)
 
         self.dropBookButton.clicked.connect(self.dropBookButtonClicked)
+        self.bookIdEdit.textChanged.connect(self.bookIdEditChanged)
+
+    def bookIdEditChanged(self):
+        bookId = self.bookIdEdit.text()
+        if (bookId == ""):
+            self.bookNameEdit.clear()
+            self.publisherEdit.clear()
+            self.authNameEdit.clear()
+            self.dropNumEdit.clear()
+            self.publishTime.clear()
+        db = QSqlDatabase.addDatabase("QSQLITE")
+        db.setDatabaseName('./db/LibraryManagement.db')
+        db.open()
+        query = QSqlQuery()
+        sql = "SELECT * FROM Book WHERE BookId='%s'" % (bookId)
+        query.exec_(sql)
+        # 查询对应书号，如果存在就更新form
+        if (query.next()):
+            self.bookNameEdit.setText(query.value(0))
+            self.authNameEdit.setText(query.value(2))
+            self.categoryComboBox.setCurrentText(query.value(3))
+            self.publisherEdit.setText(query.value(4))
+            self.publishTime.setText(query.value(5))
+        return
 
     def dropBookButtonClicked(self):
 
