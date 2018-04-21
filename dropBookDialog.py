@@ -96,9 +96,12 @@ class dropBookDialog(QDialog):
         self.titlelabel.setMargin(8)
         self.layout.setVerticalSpacing(10)
 
+        self.dropBookButton.clicked.connect(self.dropBookButtonClicked)
 
     def dropBookButtonClicked(self):
+
         return
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
