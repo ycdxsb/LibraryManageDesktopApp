@@ -11,9 +11,9 @@ from BorrowStatusViewer import BorrowStatusViewer
 
 
 class StudentHome(QWidget):
-    def __init__(self):
+    def __init__(self, studentId):
         super().__init__()
-        self.StudentId = "PB15000135"
+        self.StudentId = studentId
         self.resize(900, 600)
         self.setWindowTitle("欢迎使用图书馆管理系统")
         self.setUpUI()
@@ -92,6 +92,6 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("./images/MainWindow_1.png"))
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
-    mainMindow = StudentHome()
+    mainMindow = StudentHome("PB15000135")
     mainMindow.show()
     sys.exit(app.exec_())

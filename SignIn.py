@@ -1,13 +1,16 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon, QFont
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import *
 import qdarkstyle
 import hashlib
 from PyQt5.QtSql import *
 
 
 class SignInWidget(QWidget):
+    is_admin_signal = pyqtSignal()
+    is_student_signal = pyqtSignal(str)
+
     def __init__(self):
         super(SignInWidget, self).__init__()
         self.resize(900, 600)
@@ -94,7 +97,11 @@ class SignInWidget(QWidget):
             print(QMessageBox.information(self, "提示", "该账号不存在!", QMessageBox.Yes, QMessageBox.Yes))
         else:
             if (studentId == query.value(0) and hl.hexdigest() == query.value(2)):
-                print("正确")
+                # print("正确")
+                # 如果是管理员
+                if (studentId == "0000000000"):
+                    self.is_admin_signal.emit()
+                self.is_student_signal.emit(studentId)
             else:
                 print(QMessageBox.information(self, "提示", "密码错误!", QMessageBox.Yes, QMessageBox.Yes))
         return

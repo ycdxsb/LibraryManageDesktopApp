@@ -7,6 +7,7 @@ from addBookDialog import addBookDialog
 from dropBookDialog import dropBookDialog
 from BookStorageViewer import BookStorageViewer
 
+
 class AdminHome(QWidget):
     def __init__(self):
         super().__init__()
@@ -15,7 +16,7 @@ class AdminHome(QWidget):
     def setUpUI(self):
         self.resize(900, 600)
         self.setWindowTitle("欢迎使用图书馆管理系统")
-        self.layout=QHBoxLayout()
+        self.layout = QHBoxLayout()
         self.buttonlayout = QVBoxLayout()
         self.setLayout(self.layout)
 
@@ -37,7 +38,7 @@ class AdminHome(QWidget):
         self.buttonlayout.addWidget(self.dropBookButton)
         self.buttonlayout.addWidget(self.storageStatusButton)
         self.layout.addLayout(self.buttonlayout)
-        self.storageView=BookStorageViewer()
+        self.storageView = BookStorageViewer()
         self.layout.addWidget(self.storageView)
 
         self.addBookButton.clicked.connect(self.addBookButtonClicked)
@@ -49,10 +50,9 @@ class AdminHome(QWidget):
         addDialog.exec_()
 
     def dropBookButtonClicked(self):
-        dropDialog=dropBookDialog()
+        dropDialog = dropBookDialog()
         dropDialog.show()
         dropDialog.exec_()
-
 
 
 if __name__ == "__main__":
