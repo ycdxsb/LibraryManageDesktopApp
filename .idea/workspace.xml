@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54810fbf-eac4-4027-bd22-6f879414be51" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/returnBookDialog.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/db/LibraryManagement.db" afterPath="$PROJECT_DIR$/db/LibraryManagement.db" />
+      <change beforePath="$PROJECT_DIR$/StudentHome.py" afterPath="$PROJECT_DIR$/StudentHome.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +15,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Library$SignUp.coverage" NAME="SignUp Coverage Results" MODIFIED="1524369251740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$SignIn.coverage" NAME="SignIn Coverage Results" MODIFIED="1524369546788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Library$StudentHome.coverage" NAME="StudentHome Coverage Results" MODIFIED="1524384056124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$StudentHome.coverage" NAME="StudentHome Coverage Results" MODIFIED="1524386350242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$dropBookDialog.coverage" NAME="dropBookDialog Coverage Results" MODIFIED="1524325547421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1524153507974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$BookStorage.coverage" NAME="BookStorage Coverage Results" MODIFIED="1524110075888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
@@ -76,11 +75,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="returnBookDialog.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="returnBookDialog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/returnBookDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-772">
-              <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+            <state relative-caret-position="3444">
+              <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <marker date="1524386117155" expanded="true" signature="4278:4356" ph="SELECT * FRO... User_Book" />
@@ -93,6 +92,18 @@
                 <marker date="1524386117155" expanded="true" signature="4984:5089" ph="UPDATE User_Book... " />
                 <marker date="1524386117155" expanded="true" signature="5743:5821" ph="SELECT * FRO... User_Book" />
                 <marker date="1524386117155" expanded="true" signature="5957:5993" ph="SELECT * FRO... Book" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentHome.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StudentHome.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,9 +169,9 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/AdminHome.py" />
         <option value="$PROJECT_DIR$/BookStorageViewer.py" />
-        <option value="$PROJECT_DIR$/StudentHome.py" />
         <option value="$PROJECT_DIR$/borrowBookDialog.py" />
         <option value="$PROJECT_DIR$/returnBookDialog.py" />
+        <option value="$PROJECT_DIR$/StudentHome.py" />
       </list>
     </option>
   </component>
@@ -241,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.returnBookDialog">
+  <component name="RunManager" selected="Python.StudentHome">
     <configuration name="AdminHome" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -346,8 +357,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.returnBookDialog" />
-        <item index="1" class="java.lang.String" itemvalue="Python.StudentHome" />
+        <item index="0" class="java.lang.String" itemvalue="Python.StudentHome" />
+        <item index="1" class="java.lang.String" itemvalue="Python.returnBookDialog" />
         <item index="2" class="java.lang.String" itemvalue="Python.borrowBookDialog" />
         <item index="3" class="java.lang.String" itemvalue="Python.AdminHome" />
         <item index="4" class="java.lang.String" itemvalue="Python.BookStorageViewer" />
@@ -452,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524383716005</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="finish returnBookDialog">
+      <created>1524386172851</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1524386172851</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -530,7 +548,8 @@
     <MESSAGE value="fixed the bug of search" />
     <MESSAGE value="begin to write StudentHome and borrowBookDialog" />
     <MESSAGE value="finish borrowBookDialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish borrowBookDialog" />
+    <MESSAGE value="finish returnBookDialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish returnBookDialog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,14 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StudentHome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.Book">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -958,8 +969,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/returnBookDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-772">
-          <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+        <state relative-caret-position="3444">
+          <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <marker date="1524386117155" expanded="true" signature="4278:4356" ph="SELECT * FRO... User_Book" />
@@ -972,6 +983,16 @@
             <marker date="1524386117155" expanded="true" signature="4984:5089" ph="UPDATE User_Book... " />
             <marker date="1524386117155" expanded="true" signature="5743:5821" ph="SELECT * FRO... User_Book" />
             <marker date="1524386117155" expanded="true" signature="5957:5993" ph="SELECT * FRO... Book" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentHome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

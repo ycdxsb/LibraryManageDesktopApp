@@ -5,24 +5,26 @@ from PyQt5.QtCore import Qt
 import qdarkstyle
 from BookStorageViewer import BookStorageViewer
 from borrowBookDialog import borrowBookDialog
+from returnBookDialog import returnBookDialog
+
 
 class StudentHome(QWidget):
     def __init__(self):
         super().__init__()
-        self.StudentId="PB15000135"
+        self.StudentId = "PB15000135"
         self.resize(900, 600)
         self.setWindowTitle("欢迎使用图书馆管理系统")
         self.setUpUI()
 
     def setUpUI(self):
         # 总布局
-        self.layout=QHBoxLayout(self)
+        self.layout = QHBoxLayout(self)
         # 按钮布局
         self.buttonLayout = QVBoxLayout()
         # 按钮
-        self.borrowBookButton=QPushButton("借书")
-        self.returnBookButton=QPushButton("还书")
-        self.myBookStatus=QPushButton("已借")
+        self.borrowBookButton = QPushButton("借书")
+        self.returnBookButton = QPushButton("还书")
+        self.myBookStatus = QPushButton("已借")
         self.buttonLayout.addWidget(self.borrowBookButton)
         self.buttonLayout.addWidget(self.returnBookButton)
         self.buttonLayout.addWidget(self.myBookStatus)
@@ -32,16 +34,17 @@ class StudentHome(QWidget):
         self.returnBookButton.setFixedHeight(42)
         self.myBookStatus.setFixedWidth(100)
         self.myBookStatus.setFixedHeight(42)
-        font=QFont()
+        font = QFont()
         font.setPixelSize(16)
         self.borrowBookButton.setFont(font)
         self.returnBookButton.setFont(font)
         self.myBookStatus.setFont(font)
 
-        self.storageView=BookStorageViewer()
+        self.storageView = BookStorageViewer()
         self.layout.addLayout(self.buttonLayout)
         self.layout.addWidget(self.storageView)
         self.borrowBookButton.clicked.connect(self.borrowBookButtonClicked)
+        self.returnBookButton.clicked.connect(self.returnBookButtonClicked)
 
     def borrowBookButtonClicked(self):
         borrowDialog = borrowBookDialog(self.StudentId)
@@ -49,6 +52,10 @@ class StudentHome(QWidget):
         borrowDialog.exec_()
         return
 
+    def returnBookButtonClicked(self):
+        returnDialog = returnBookDialog(self.StudentId)
+        returnDialog.show()
+        returnDialog.exec_()
 
 
 if __name__ == "__main__":
