@@ -84,7 +84,7 @@ class BookStorageViewer(QWidget):
         self.db.open()
         self.tableView = QTableView()
         self.tableView.horizontalHeader().setStretchLastSection(True)
-        #self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.tableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.queryModel = QSqlQueryModel()
         self.searchButtonClicked()
@@ -126,9 +126,14 @@ class BookStorageViewer(QWidget):
     def recordQuery(self, index):
         queryCondition = ""
         if (self.searchEdit.text() == ""):
+            queryCondition = "select * from Book"
+            self.queryModel.setQuery(queryCondition)
+            self.totalRecord = self.queryModel.rowCount()
+            self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
+            label = "/" + str(int(self.totalPage)) + "页"
+            self.pageLabel.setText(label)
             queryCondition = ("select * from Book limit %d,%d " % (index, self.pageRecord))
             self.queryModel.setQuery(queryCondition)
-            print(queryCondition)
             return
         conditionChoice = self.condisionComboBox.currentText()
         if (conditionChoice == "按书名查询"):
@@ -146,9 +151,15 @@ class BookStorageViewer(QWidget):
         s = '%'
         for i in range(0, len(temp)):
             s = s + temp[i] + "%"
+        queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s'" % (
+            conditionChoice, s))
+        self.queryModel.setQuery(queryCondition)
+        self.totalRecord = self.queryModel.rowCount()
+        self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
+        label = "/" + str(int(self.totalPage)) + "页"
+        self.pageLabel.setText(label)
         queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s' LIMIT %d,%d " % (
             conditionChoice, s, index, self.pageRecord))
-        print(queryCondition)
         self.queryModel.setQuery(queryCondition)
         return
 
