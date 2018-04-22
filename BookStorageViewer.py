@@ -84,7 +84,7 @@ class BookStorageViewer(QWidget):
         self.db.open()
         self.tableView = QTableView()
         self.tableView.horizontalHeader().setStretchLastSection(True)
-        # self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.tableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.queryModel = QSqlQueryModel()
         self.searchButtonClicked()

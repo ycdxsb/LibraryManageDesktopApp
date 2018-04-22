@@ -3,15 +3,52 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtCore import Qt
 import qdarkstyle
-
+from BookStorageViewer import BookStorageViewer
+from borrowBookDialog import borrowBookDialog
 
 class StudentHome(QWidget):
     def __init__(self):
         super().__init__()
+        self.StudentId="PB15000135"
+        self.resize(900, 600)
+        self.setWindowTitle("欢迎使用图书馆管理系统")
         self.setUpUI()
 
     def setUpUI(self):
-        self.button = QPushButton()
+        # 总布局
+        self.layout=QHBoxLayout(self)
+        # 按钮布局
+        self.buttonLayout = QVBoxLayout()
+        # 按钮
+        self.borrowBookButton=QPushButton("借书")
+        self.returnBookButton=QPushButton("还书")
+        self.myBookStatus=QPushButton("已借")
+        self.buttonLayout.addWidget(self.borrowBookButton)
+        self.buttonLayout.addWidget(self.returnBookButton)
+        self.buttonLayout.addWidget(self.myBookStatus)
+        self.borrowBookButton.setFixedWidth(100)
+        self.borrowBookButton.setFixedHeight(42)
+        self.returnBookButton.setFixedWidth(100)
+        self.returnBookButton.setFixedHeight(42)
+        self.myBookStatus.setFixedWidth(100)
+        self.myBookStatus.setFixedHeight(42)
+        font=QFont()
+        font.setPixelSize(16)
+        self.borrowBookButton.setFont(font)
+        self.returnBookButton.setFont(font)
+        self.myBookStatus.setFont(font)
+
+        self.storageView=BookStorageViewer()
+        self.layout.addLayout(self.buttonLayout)
+        self.layout.addWidget(self.storageView)
+        self.borrowBookButton.clicked.connect(self.borrowBookButtonClicked)
+
+    def borrowBookButtonClicked(self):
+        borrowDialog = borrowBookDialog(self.StudentId)
+        borrowDialog.show()
+        borrowDialog.exec_()
+        return
+
 
 
 if __name__ == "__main__":
