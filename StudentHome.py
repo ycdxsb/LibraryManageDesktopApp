@@ -24,7 +24,7 @@ class StudentHome(QWidget):
         # 按钮
         self.borrowBookButton = QPushButton("借书")
         self.returnBookButton = QPushButton("还书")
-        self.myBookStatus = QPushButton("已借")
+        self.myBookStatus = QPushButton("借阅状态")
         self.buttonLayout.addWidget(self.borrowBookButton)
         self.buttonLayout.addWidget(self.returnBookButton)
         self.buttonLayout.addWidget(self.myBookStatus)
