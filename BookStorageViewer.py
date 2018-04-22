@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from PyQt5.QtCore import *
+from PyQt5.QtCore import Qt
 import qdarkstyle
 from PyQt5.QtSql import *
 
@@ -14,7 +15,7 @@ class BookStorageViewer(QWidget):
         # 查询模型
         self.queryModel = None
         # 数据表
-        self.tableViewer = None
+        self.tableView = None
         # 当前页
         self.currentPage = 0
         # 总页数
@@ -23,7 +24,6 @@ class BookStorageViewer(QWidget):
         self.totalRecord = 0
         # 每页数据数
         self.pageRecord = 5
-
         self.setUpUI()
 
     def setUpUI(self):
@@ -77,36 +77,33 @@ class BookStorageViewer(QWidget):
         widget.setFixedWidth(300)
         self.Hlayout2.addWidget(widget)
 
-        # tableViewer
+        # tableView
         # 序号，书名，书号，作者，分类，出版社，出版时间，库存，剩余可借
-        self.tableViewer = QTableView()
         self.db = QSqlDatabase.addDatabase("QSQLITE")
         self.db.setDatabaseName('./db/LibraryManagement.db')
         self.db.open()
-        self.model = QSqlTableModel()
-        self.model.setTable("book")
-        self.model.setEditStrategy(QSqlTableModel.OnManualSubmit)
-        self.model.setFilter("BookId LIKE 'I%'")
-        self.model.select()
-        self.model.setHeaderData(0, Qt.Horizontal, "书名")
-        self.model.setHeaderData(1, Qt.Horizontal, "书号")
-        self.model.setHeaderData(2, Qt.Horizontal, "作者")
-        self.model.setHeaderData(3, Qt.Horizontal, "分类")
-        self.model.setHeaderData(4, Qt.Horizontal, "出版社")
-        self.model.setHeaderData(5, Qt.Horizontal, "出版时间")
-        self.model.setHeaderData(6, Qt.Horizontal, "库存")
-        self.model.setHeaderData(7, Qt.Horizontal, "剩余可借")
-        self.model.setHeaderData(8, Qt.Horizontal, "已借")
-        self.tableViewer.setModel(self.model)
-        self.tableViewer.horizontalHeader().setStretchLastSection(True)
-        self.tableViewer.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-        self.tableViewer.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.layout.addLayout(self.Hlayout1)
-        self.layout.addWidget(self.tableViewer)
-        self.layout.addLayout(self.Hlayout2)
-        self.setLayout(self.layout)
+        self.tableView = QTableView()
+        self.tableView.horizontalHeader().setStretchLastSection(True)
+        #self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.tableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.queryModel = QSqlQueryModel()
         self.searchButtonClicked()
+        self.tableView.setModel(self.queryModel)
+
+        self.queryModel.setHeaderData(0, Qt.Horizontal, "书名")
+        self.queryModel.setHeaderData(1, Qt.Horizontal, "书号")
+        self.queryModel.setHeaderData(2, Qt.Horizontal, "作者")
+        self.queryModel.setHeaderData(3, Qt.Horizontal, "分类")
+        self.queryModel.setHeaderData(4, Qt.Horizontal, "出版社")
+        self.queryModel.setHeaderData(5, Qt.Horizontal, "出版时间")
+        self.queryModel.setHeaderData(6, Qt.Horizontal, "库存")
+        self.queryModel.setHeaderData(7, Qt.Horizontal, "剩余可借")
+        self.queryModel.setHeaderData(8, Qt.Horizontal, "已借")
+
+        self.layout.addLayout(self.Hlayout1)
+        self.layout.addWidget(self.tableView)
+        self.layout.addLayout(self.Hlayout2)
+        self.setLayout(self.layout)
         self.searchButton.clicked.connect(self.searchButtonClicked)
         self.prevButton.clicked.connect(self.prevButtonClicked)
         self.backButton.clicked.connect(self.backButtonClicked)
@@ -122,15 +119,16 @@ class BookStorageViewer(QWidget):
     def getPageCount(self):
         self.getTotalRecordCount()
         # 上取整
-        self.totalPage = (self.totalRecord + self.pageRecord - 1) / self.pageRecord
+        self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
         return
 
     # 分页记录查询
     def recordQuery(self, index):
         queryCondition = ""
         if (self.searchEdit.text() == ""):
-            queryCondition = ("SELECT * FROM Book limit %d,%d " % (index, self.pageRecord))
+            queryCondition = ("select * from Book limit %d,%d " % (index, self.pageRecord))
             self.queryModel.setQuery(queryCondition)
+            print(queryCondition)
             return
         conditionChoice = self.condisionComboBox.currentText()
         if (conditionChoice == "按书名查询"):
@@ -148,8 +146,9 @@ class BookStorageViewer(QWidget):
         s = '%'
         for i in range(0, len(temp)):
             s = s + temp[i] + "%"
-        queryCondition = ("SELECT * FROM Book WHERE '%s' LIKE '%s' limit %d,%d " % (
+        queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s' LIMIT %d,%d " % (
             conditionChoice, s, index, self.pageRecord))
+        print(queryCondition)
         self.queryModel.setQuery(queryCondition)
         return
 
