@@ -134,6 +134,7 @@ class SignUpWidget(QWidget):
                         studentId, studentName, md5password)
                     db.exec_(sql)
                     db.commit()
+                    print(QMessageBox.information(self, "提醒", "您已成功注册账号!", QMessageBox.Yes, QMessageBox.Yes))
                 db.close()
                 return
 
