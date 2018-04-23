@@ -8,6 +8,8 @@ import hashlib
 
 
 class SignUpWidget(QWidget):
+    student_signin_signal = pyqtSignal(str)
+
     def __init__(self):
         super().__init__()
         self.setUpUI()
@@ -135,6 +137,7 @@ class SignUpWidget(QWidget):
                     db.exec_(sql)
                     db.commit()
                     print(QMessageBox.information(self, "提醒", "您已成功注册账号!", QMessageBox.Yes, QMessageBox.Yes))
+                    self.student_signin_signal.emit(studentId)
                 db.close()
                 return
 

@@ -56,6 +56,7 @@ class Main(QMainWindow):
             sip.delete(self.widget)
             self.widget = SignUpWidget()
             self.setCentralWidget(self.widget)
+            self.widget.student_signin_signal[str].connect(self.studentSignIn)
             self.signUpAction.setEnabled(False)
             self.signInAction.setEnabled(True)
             self.quitSignInAction.setEnabled(False)
@@ -78,7 +79,7 @@ class Main(QMainWindow):
             self.signInAction.setEnabled(False)
             self.quitSignInAction.setEnabled(False)
         if (q.text() == "退出"):
-            qApp=QApplication.instance()
+            qApp = QApplication.instance()
             qApp.quit()
         return
 
