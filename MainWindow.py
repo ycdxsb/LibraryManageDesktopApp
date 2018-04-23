@@ -1,9 +1,10 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon, QFont
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import *
 import qdarkstyle
 from SignIn import SignInWidget
+from SignUp import SignUpWidget
 import sip
 from AdminHome import AdminHome
 from StudentHome import StudentHome
@@ -18,21 +19,68 @@ class Main(QMainWindow):
         self.setWindowTitle("欢迎登陆图书馆管理系统")
         self.setCentralWidget(self.widget)
         bar = self.menuBar()
-        Menu = bar.addMenu("菜单栏")
-        Menu.addAction("注册账号")
-        Menu.addAction("退出程序")
+        self.Menu = bar.addMenu("菜单栏")
+        self.signUpAction = QAction("注册", self)
+        self.signInAction = QAction("登录", self)
+        self.quitSignInAction = QAction("退出登录", self)
+        self.quitAction = QAction("退出", self)
+        self.Menu.addAction(self.signUpAction)
+        self.Menu.addAction(self.signInAction)
+        self.Menu.addAction(self.quitSignInAction)
+        self.Menu.addAction(self.quitAction)
+        self.signUpAction.setEnabled(True)
+        self.signInAction.setEnabled(False)
+        self.quitSignInAction.setEnabled(False)
         self.widget.is_admin_signal.connect(self.adminSignIn)
         self.widget.is_student_signal[str].connect(self.studentSignIn)
+        self.Menu.triggered[QAction].connect(self.menuTriggered)
 
     def adminSignIn(self):
         sip.delete(self.widget)
         self.widget = AdminHome()
         self.setCentralWidget(self.widget)
+        self.signUpAction.setEnabled(True)
+        self.signInAction.setEnabled(False)
+        self.quitSignInAction.setEnabled(True)
 
     def studentSignIn(self, studentId):
         sip.delete(self.widget)
         self.widget = StudentHome(studentId)
         self.setCentralWidget(self.widget)
+        self.signUpAction.setEnabled(True)
+        self.signInAction.setEnabled(False)
+        self.quitSignInAction.setEnabled(True)
+
+    def menuTriggered(self, q):
+        if (q.text() == "注册"):
+            sip.delete(self.widget)
+            self.widget = SignUpWidget()
+            self.setCentralWidget(self.widget)
+            self.signUpAction.setEnabled(False)
+            self.signInAction.setEnabled(True)
+            self.quitSignInAction.setEnabled(False)
+        if (q.text() == "退出登录"):
+            sip.delete(self.widget)
+            self.widget = SignInWidget()
+            self.setCentralWidget(self.widget)
+            self.widget.is_admin_signal.connect(self.adminSignIn)
+            self.widget.is_student_signal[str].connect(self.studentSignIn)
+            self.signUpAction.setEnabled(True)
+            self.signInAction.setEnabled(False)
+            self.quitSignInAction.setEnabled(False)
+        if (q.text() == "登录"):
+            sip.delete(self.widget)
+            self.widget = SignInWidget()
+            self.setCentralWidget(self.widget)
+            self.widget.is_admin_signal.connect(self.adminSignIn)
+            self.widget.is_student_signal[str].connect(self.studentSignIn)
+            self.signUpAction.setEnabled(True)
+            self.signInAction.setEnabled(False)
+            self.quitSignInAction.setEnabled(False)
+        if (q.text() == "退出"):
+            qApp=QApplication.instance()
+            qApp.quit()
+        return
 
 
 if __name__ == "__main__":

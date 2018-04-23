@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="54810fbf-eac4-4027-bd22-6f879414be51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/MainWindow.py" afterPath="$PROJECT_DIR$/MainWindow.py" />
+      <change beforePath="$PROJECT_DIR$/SignIn.py" afterPath="$PROJECT_DIR$/SignIn.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,11 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Library$SignUp.coverage" NAME="SignUp Coverage Results" MODIFIED="1524369251740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$SignUp.coverage" NAME="SignUp Coverage Results" MODIFIED="1524413874306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$SignIn.coverage" NAME="SignIn Coverage Results" MODIFIED="1524369546788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$StudentHome.coverage" NAME="StudentHome Coverage Results" MODIFIED="1524413119713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$dropBookDialog.coverage" NAME="dropBookDialog Coverage Results" MODIFIED="1524325547421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Library$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1524413300888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1524452362844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$BookStorage.coverage" NAME="BookStorage Coverage Results" MODIFIED="1524110075888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Library$BorrowStatusViewer.coverage" NAME="BorrowStatusViewer Coverage Results" MODIFIED="1524399897531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$returnBookDialog.coverage" NAME="returnBookDialog Coverage Results" MODIFIED="1524386117176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -45,17 +47,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="LibraryManagement.db" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LibraryManagement.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LibraryManagement.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-      </path>
     </expand>
     <select />
   </component>
@@ -64,10 +55,36 @@
       <file leaf-file-name="MainWindow.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="189">
+              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignUp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SignUp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+              <folding>
+                <marker date="1524117418454" expanded="true" signature="4998:5037" ph="SELECT * FRO... user" />
+                <marker date="1524117418454" expanded="true" signature="5306:5352" ph="INSERT INTO user... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignIn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SignIn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1524447861126" expanded="true" signature="3051:3095" ph="SELECT * FRO... user" />
               </folding>
             </state>
           </provider>
@@ -117,9 +134,9 @@
         <option value="$PROJECT_DIR$/returnBookDialog.py" />
         <option value="$PROJECT_DIR$/BorrowStatusViewer.py" />
         <option value="$PROJECT_DIR$/AdminHome.py" />
-        <option value="$PROJECT_DIR$/MainWindow.py" />
         <option value="$PROJECT_DIR$/StudentHome.py" />
         <option value="$PROJECT_DIR$/SignIn.py" />
+        <option value="$PROJECT_DIR$/MainWindow.py" />
       </list>
     </option>
   </component>
@@ -150,7 +167,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,6 +189,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,6 +274,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="SignUp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Library" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SignUp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="StudentHome" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -276,39 +312,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="returnBookDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Library" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/returnBookDialog.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.AdminHome" />
       <item index="1" class="java.lang.String" itemvalue="Python.StudentHome" />
-      <item index="2" class="java.lang.String" itemvalue="Python.returnBookDialog" />
-      <item index="3" class="java.lang.String" itemvalue="Python.BorrowStatusViewer" />
-      <item index="4" class="java.lang.String" itemvalue="Python.MainWindow" />
+      <item index="2" class="java.lang.String" itemvalue="Python.BorrowStatusViewer" />
+      <item index="3" class="java.lang.String" itemvalue="Python.MainWindow" />
+      <item index="4" class="java.lang.String" itemvalue="Python.SignUp" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.MainWindow" />
-        <item index="1" class="java.lang.String" itemvalue="Python.StudentHome" />
-        <item index="2" class="java.lang.String" itemvalue="Python.AdminHome" />
-        <item index="3" class="java.lang.String" itemvalue="Python.BorrowStatusViewer" />
-        <item index="4" class="java.lang.String" itemvalue="Python.returnBookDialog" />
+        <item index="1" class="java.lang.String" itemvalue="Python.SignUp" />
+        <item index="2" class="java.lang.String" itemvalue="Python.StudentHome" />
+        <item index="3" class="java.lang.String" itemvalue="Python.AdminHome" />
+        <item index="4" class="java.lang.String" itemvalue="Python.BorrowStatusViewer" />
       </list>
     </recent_temporary>
   </component>
@@ -459,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524413418742</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add AdminHome and StudentHome to MainWindow">
+      <created>1524413510235</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1524413510235</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -476,18 +500,18 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3273743" sideWeight="0.5418455" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3273743" sideWeight="0.54613733" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33519554" sideWeight="0.48229614" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3273743" sideWeight="0.4581545" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3273743" sideWeight="0.45386267" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13787554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13948497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10997854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988827" sideWeight="0.46995708" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988827" sideWeight="0.46781117" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -554,7 +578,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="43" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -760,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SignUp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2266">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -792,14 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="134" column="89" lean-forward="true" selection-start-line="130" selection-start-column="7" selection-end-line="134" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-            <marker date="1524383519775" expanded="true" signature="4291:4327" ph="SELECT * FRO... Book" />
-            <marker date="1524383519775" expanded="true" signature="4550:4642" ph="UPDATE User... " />
-            <marker date="1524383519775" expanded="true" signature="4739:4826" ph="UPDATE Book... " />
-            <marker date="1524383519775" expanded="true" signature="4991:5043" ph="INSERT INTO Book... " />
-            <marker date="1524383519775" expanded="true" signature="5648:5684" ph="SELECT * FRO... Book" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,19 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3444">
           <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-            <marker date="1524386117155" expanded="true" signature="4278:4356" ph="SELECT * FRO... User_Book" />
-            <marker date="1524386117155" expanded="true" signature="4597:4659" ph="UPDATE User... " />
-            <marker date="1524386117155" expanded="true" signature="4756:4772" ph="UPDATE Book... " />
-            <marker date="1524386117155" expanded="true" signature="4756:4817" ph="UPDATE Book... " />
-            <marker date="1524386117155" expanded="true" signature="4984:5020" ph="UPDATE User_Book... " />
-            <marker date="1524386117155" expanded="true" signature="4984:5055" ph="UPDATE User_Book... " />
-            <marker date="1524386117155" expanded="true" signature="4984:5071" ph="UPDATE User_Book... " />
-            <marker date="1524386117155" expanded="true" signature="4984:5089" ph="UPDATE User_Book... " />
-            <marker date="1524386117155" expanded="true" signature="5743:5821" ph="SELECT * FRO... User_Book" />
-            <marker date="1524386117155" expanded="true" signature="5957:5993" ph="SELECT * FRO... Book" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,12 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1524399897490" expanded="true" signature="3291:3454" ph="SELECT * FRO... Book" />
-            <marker date="1524399897490" expanded="true" signature="3291:3473" ph="SELECT Book.... Book" />
-            <marker date="1524399897490" expanded="true" signature="3598:3791" ph="SELECT Book.... Book" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,16 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-          <folding>
-            <element signature="e#24#34#0" expanded="true" />
-            <marker date="1524378871854" expanded="true" signature="4140:4158" ph="SELECT * FRO... Book" />
-            <marker date="1524378871854" expanded="true" signature="4573:4591" ph="select * fro... Book" />
-            <marker date="1524378871854" expanded="true" signature="4927:4955" ph="select * fro... Book" />
-            <marker date="1524378871854" expanded="true" signature="5679:5713" ph="SELECT * FRO... Book" />
-            <marker date="1524378871854" expanded="true" signature="5679:5715" ph="SELECT * FRO... Book" />
-            <marker date="1524378871854" expanded="true" signature="5679:5716" ph="SELECT * FRO... Book" />
-            <marker date="1524378871854" expanded="true" signature="6065:6112" ph="SELECT * FRO... Book" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -871,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="137" column="27" lean-forward="true" selection-start-line="134" selection-start-column="8" selection-end-line="137" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,21 +881,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SignUp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <marker date="1524117418454" expanded="true" signature="4998:5037" ph="SELECT * FRO... user" />
+            <marker date="1524117418454" expanded="true" signature="5306:5352" ph="INSERT INTO user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SignIn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="103" column="31" lean-forward="false" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+        <state relative-caret-position="252">
+          <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1524413119690" expanded="true" signature="3051:3095" ph="SELECT * FRO... user" />
+            <marker date="1524447861126" expanded="true" signature="3051:3095" ph="SELECT * FRO... user" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="189">
+          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

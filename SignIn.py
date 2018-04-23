@@ -49,7 +49,7 @@ class SignInWidget(QWidget):
 
         self.lineEdit2.setEchoMode(QLineEdit.Password)
         self.formlayout.addRow(self.label2, self.lineEdit2)
-        self.signIn = QPushButton("登 陆")
+        self.signIn = QPushButton("登 录")
         self.signIn.setFixedWidth(80)
         self.signIn.setFixedHeight(30)
         self.signIn.setFont(labelFont)
@@ -101,7 +101,8 @@ class SignInWidget(QWidget):
                 # 如果是管理员
                 if (studentId == "0000000000"):
                     self.is_admin_signal.emit()
-                self.is_student_signal.emit(studentId)
+                else:
+                    self.is_student_signal.emit(studentId)
             else:
                 print(QMessageBox.information(self, "提示", "密码错误!", QMessageBox.Yes, QMessageBox.Yes))
         return
