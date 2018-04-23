@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QIcon, QFont
+from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import qdarkstyle
 import hashlib
@@ -43,6 +43,17 @@ class SignInWidget(QWidget):
         self.lineEdit2.setFixedHeight(32)
         self.lineEdit2.setFixedWidth(180)
         self.lineEdit2.setMaxLength(16)
+
+        # 设置验证
+        reg = QRegExp("PB[0~9]{8}")
+        pValidator = QRegExpValidator(self)
+        pValidator.setRegExp(reg)
+        self.lineEdit1.setValidator(pValidator)
+
+        reg = QRegExp("[a-zA-z0-9]+$")
+        pValidator.setRegExp(reg)
+        self.lineEdit2.setValidator(pValidator)
+
         passwordFont = QFont()
         passwordFont.setPixelSize(10)
         self.lineEdit2.setFont(passwordFont)
