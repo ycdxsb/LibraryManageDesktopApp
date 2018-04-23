@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="54810fbf-eac4-4027-bd22-6f879414be51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MainWindow.py" afterPath="$PROJECT_DIR$/MainWindow.py" />
-      <change beforePath="$PROJECT_DIR$/SignUp.py" afterPath="$PROJECT_DIR$/SignUp.py" />
-      <change beforePath="$PROJECT_DIR$/db/LibraryManagement.db" afterPath="$PROJECT_DIR$/db/LibraryManagement.db" />
+      <change beforePath="$PROJECT_DIR$/dropBookDialog.py" afterPath="$PROJECT_DIR$/dropBookDialog.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,7 +65,7 @@
       <file leaf-file-name="SignUp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SignUp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
+            <state relative-caret-position="2793">
               <caret line="139" column="46" lean-forward="false" selection-start-line="139" selection-start-column="46" selection-end-line="139" selection-end-column="46" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -81,14 +79,14 @@
       <file leaf-file-name="MainWindow.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="861">
+              <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User" pinned="false" current-in-tab="false">
         <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.User">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -97,14 +95,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignIn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SignIn.py">
+      <file leaf-file-name="dropBookDialog.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dropBookDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="104" column="36" lean-forward="false" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+            <state relative-caret-position="380">
+              <caret line="152" column="24" lean-forward="true" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
               <folding>
-                <marker date="1524447861126" expanded="true" signature="3051:3095" ph="SELECT * FRO... user" />
+                <marker date="1524482951602" expanded="true" signature="4214:4250" ph="SELECT * FRO... Book" />
+                <marker date="1524482951602" expanded="true" signature="5120:5156" ph="SELECT * FRO... Book" />
+                <marker date="1524482951602" expanded="true" signature="5695:5782" ph="UPDATE BOOK... " />
+                <marker date="1524482951602" expanded="true" signature="5964:6009" ph="INSERT INTO buyordrop... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Book" pinned="false" current-in-tab="false">
+        <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.Book">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -143,7 +153,6 @@
         <option value="$PROJECT_DIR$/untitled.py" />
         <option value="$PROJECT_DIR$/venv/BookStorage.py" />
         <option value="$PROJECT_DIR$/venv/BookStorageViewer.py" />
-        <option value="$PROJECT_DIR$/dropBookDialog.py" />
         <option value="$PROJECT_DIR$/addBookDialog.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/console.sql" />
         <option value="$PROJECT_DIR$/test.py" />
@@ -156,6 +165,7 @@
         <option value="$PROJECT_DIR$/SignIn.py" />
         <option value="$PROJECT_DIR$/SignUp.py" />
         <option value="$PROJECT_DIR$/MainWindow.py" />
+        <option value="$PROJECT_DIR$/dropBookDialog.py" />
       </list>
     </option>
   </component>
@@ -187,6 +197,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,8 +210,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -514,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524464576529</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="when signUp,it can jump to signInpage">
+      <created>1524482268358</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1524482268358</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -532,17 +549,17 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33295712" sideWeight="0.5044346" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3273743" sideWeight="0.45386267" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33519554" sideWeight="0.48229614" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.326257" sideWeight="0.4955654" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14592275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273743" sideWeight="0.45386267" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.326257" sideWeight="0.4955654" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14806867" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10997854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988827" sideWeight="0.46781117" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988827" sideWeight="0.46781117" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -600,7 +617,8 @@
     <MESSAGE value="add AdminHome and StudentHome to MainWindow" />
     <MESSAGE value="finish the project, prepare to fixed bugs and test" />
     <MESSAGE value="use pyinstaller get .exe" />
-    <option name="LAST_COMMIT_MESSAGE" value="use pyinstaller get .exe" />
+    <MESSAGE value="when signUp,it can jump to signInpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="when signUp,it can jump to signInpage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.Book">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.User_Book">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -880,20 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dropBookDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="137" column="27" lean-forward="true" selection-start-line="134" selection-start-column="8" selection-end-line="137" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdminHome.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,15 +902,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SignIn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
+        <state relative-caret-position="2058">
           <caret line="104" column="36" lean-forward="false" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
           <folding>
             <marker date="1524447861126" expanded="true" signature="3051:3095" ph="SELECT * FRO... user" />
@@ -919,7 +917,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SignUp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
+        <state relative-caret-position="2793">
           <caret line="139" column="46" lean-forward="false" selection-start-line="139" selection-start-column="46" selection-end-line="139" selection-end-column="46" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -931,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="861">
+          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -941,6 +939,26 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.Book">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dropBookDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="152" column="24" lean-forward="true" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
+          <folding>
+            <marker date="1524482951602" expanded="true" signature="4214:4250" ph="SELECT * FRO... Book" />
+            <marker date="1524482951602" expanded="true" signature="5120:5156" ph="SELECT * FRO... Book" />
+            <marker date="1524482951602" expanded="true" signature="5695:5782" ph="UPDATE BOOK... " />
+            <marker date="1524482951602" expanded="true" signature="5964:6009" ph="INSERT INTO buyordrop... " />
+          </folding>
         </state>
       </provider>
     </entry>

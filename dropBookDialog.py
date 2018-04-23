@@ -144,8 +144,12 @@ class dropBookDialog(QDialog):
                                           QMessageBox.Yes))
                 return
         # 更新Book表和BuyorDrop表
-        sql = "UPDATE BOOK SET NumStorage=NumStorage-%d,NumCanBorrow=NumCanBorrow-%d WHERE BookId='%s'" % (
-        dropNum, dropNum, bookId)
+        # 如果drop书目和当前库存相同，则直接删除Book记录（这里先默认当前所有书都在库存中）
+        if (dropNum == query.value(6)):
+            sql = "DELETE * FROM Book WHERE BookId='%s'" % (bookId)
+        else:
+            sql = "UPDATE BOOK SET NumStorage=NumStorage-%d,NumCanBorrow=NumCanBorrow-%d WHERE BookId='%s'" % (
+                dropNum, dropNum, bookId)
         query.exec_(sql)
         db.commit()
 
