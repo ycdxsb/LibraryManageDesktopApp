@@ -196,8 +196,16 @@ class BookStorageViewer(QWidget):
 
     # 点击跳转
     def jumpToButtonClicked(self):
-        self.currentPage = int(self.pageEdit.text())
+        if (self.pageEdit.text().isdigit()):
+            self.currentPage = int(self.pageEdit.text())
+            if (self.currentPage > self.totalPage):
+                self.currentPage = self.totalPage
+            if (self.currentPage <= 1):
+                self.currentPage = 1
+        else:
+            self.currentPage = 1
         index = (self.currentPage - 1) * self.pageRecord
+        self.pageEdit.setText(str(self.currentPage))
         self.recordQuery(index)
         return
 
