@@ -108,6 +108,18 @@ class BookStorageViewer(QWidget):
         self.prevButton.clicked.connect(self.prevButtonClicked)
         self.backButton.clicked.connect(self.backButtonClicked)
         self.jumpToButton.clicked.connect(self.jumpToButtonClicked)
+        self.searchEdit.returnPressed.connect(self.searchButtonClicked)
+
+    def setButtonStatus(self):
+        if(self.currentPage==self.totalPage):
+            self.prevButton.setEnabled(True)
+            self.backButton.setEnabled(False)
+        if(self.currentPage==1):
+            self.backButton.setEnabled(True)
+            self.prevButton.setEnabled(False)
+        if(self.currentPage<self.totalPage and self.currentPage>1):
+            self.prevButton.setEnabled(True)
+            self.backButton.setEnabled(True)
 
     # 得到记录数
     def getTotalRecordCount(self):
@@ -134,6 +146,7 @@ class BookStorageViewer(QWidget):
             self.pageLabel.setText(label)
             queryCondition = ("select * from Book limit %d,%d " % (index, self.pageRecord))
             self.queryModel.setQuery(queryCondition)
+            self.setButtonStatus()
             return
         conditionChoice = self.condisionComboBox.currentText()
         if (conditionChoice == "按书名查询"):
@@ -155,12 +168,26 @@ class BookStorageViewer(QWidget):
             conditionChoice, s))
         self.queryModel.setQuery(queryCondition)
         self.totalRecord = self.queryModel.rowCount()
+        # 当查询无记录时的操作
+        if(self.totalRecord==0):
+            print(QMessageBox.information(self,"提醒","查询无记录",QMessageBox.Yes,QMessageBox.Yes))
+            queryCondition = "select * from Book"
+            self.queryModel.setQuery(queryCondition)
+            self.totalRecord = self.queryModel.rowCount()
+            self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
+            label = "/" + str(int(self.totalPage)) + "页"
+            self.pageLabel.setText(label)
+            queryCondition = ("select * from Book limit %d,%d " % (index, self.pageRecord))
+            self.queryModel.setQuery(queryCondition)
+            self.setButtonStatus()
+            return
         self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
         label = "/" + str(int(self.totalPage)) + "页"
         self.pageLabel.setText(label)
         queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s' LIMIT %d,%d " % (
             conditionChoice, s, index, self.pageRecord))
         self.queryModel.setQuery(queryCondition)
+        self.setButtonStatus()
         return
 
     # 点击查询
