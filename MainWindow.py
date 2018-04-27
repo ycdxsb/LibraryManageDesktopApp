@@ -8,6 +8,7 @@ from SignUp import SignUpWidget
 import sip
 from AdminHome import AdminHome
 from StudentHome import StudentHome
+from changePasswordDialog import changePasswordDialog
 
 
 class Main(QMainWindow):
@@ -21,14 +22,17 @@ class Main(QMainWindow):
         bar = self.menuBar()
         self.Menu = bar.addMenu("菜单栏")
         self.signUpAction = QAction("注册", self)
+        self.changePasswordAction =QAction("修改密码",self)
         self.signInAction = QAction("登录", self)
         self.quitSignInAction = QAction("退出登录", self)
         self.quitAction = QAction("退出", self)
         self.Menu.addAction(self.signUpAction)
+        self.Menu.addAction(self.changePasswordAction)
         self.Menu.addAction(self.signInAction)
         self.Menu.addAction(self.quitSignInAction)
         self.Menu.addAction(self.quitAction)
         self.signUpAction.setEnabled(True)
+        self.changePasswordAction.setEnabled(True)
         self.signInAction.setEnabled(False)
         self.quitSignInAction.setEnabled(False)
         self.widget.is_admin_signal.connect(self.adminSignIn)
@@ -39,6 +43,7 @@ class Main(QMainWindow):
         sip.delete(self.widget)
         self.widget = AdminHome()
         self.setCentralWidget(self.widget)
+        self.changePasswordAction.setEnabled(False)
         self.signUpAction.setEnabled(True)
         self.signInAction.setEnabled(False)
         self.quitSignInAction.setEnabled(True)
@@ -47,17 +52,25 @@ class Main(QMainWindow):
         sip.delete(self.widget)
         self.widget = StudentHome(studentId)
         self.setCentralWidget(self.widget)
+        self.changePasswordAction.setEnabled(False)
         self.signUpAction.setEnabled(True)
         self.signInAction.setEnabled(False)
         self.quitSignInAction.setEnabled(True)
 
     def menuTriggered(self, q):
+        if(q.text()=="修改密码"):
+            changePswdDialog=changePasswordDialog(self)
+            changePswdDialog.show()
+            changePswdDialog.exec_()
+            return
+
         if (q.text() == "注册"):
             sip.delete(self.widget)
             self.widget = SignUpWidget()
             self.setCentralWidget(self.widget)
             self.widget.student_signin_signal[str].connect(self.studentSignIn)
             self.signUpAction.setEnabled(False)
+            self.changePasswordAction.setEnabled(True)
             self.signInAction.setEnabled(True)
             self.quitSignInAction.setEnabled(False)
         if (q.text() == "退出登录"):
@@ -67,6 +80,7 @@ class Main(QMainWindow):
             self.widget.is_admin_signal.connect(self.adminSignIn)
             self.widget.is_student_signal[str].connect(self.studentSignIn)
             self.signUpAction.setEnabled(True)
+            self.changePasswordAction.setEnabled(True)
             self.signInAction.setEnabled(False)
             self.quitSignInAction.setEnabled(False)
         if (q.text() == "登录"):
@@ -76,6 +90,7 @@ class Main(QMainWindow):
             self.widget.is_admin_signal.connect(self.adminSignIn)
             self.widget.is_student_signal[str].connect(self.studentSignIn)
             self.signUpAction.setEnabled(True)
+            self.changePasswordAction.setEnabled(True)
             self.signInAction.setEnabled(False)
             self.quitSignInAction.setEnabled(False)
         if (q.text() == "退出"):
