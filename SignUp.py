@@ -104,6 +104,10 @@ class SignUpWidget(QWidget):
         self.passwordLineEdit.setValidator(pValidator)
         self.passwordConfirmLineEdit.setValidator(pValidator)
         self.signUpbutton.clicked.connect(self.SignUp)
+        self.studentIdLineEdit.returnPressed.connect(self.SignUp)
+        self.studentNameLineEdit.returnPressed.connect(self.SignUp)
+        self.passwordLineEdit.returnPressed.connect(self.SignUp)
+        self.passwordConfirmLineEdit.returnPressed.connect(self.SignUp)
 
     def SignUp(self):
         studentId = self.studentIdLineEdit.text()
