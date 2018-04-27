@@ -23,7 +23,7 @@ class BookStorageViewer(QWidget):
         # 总记录数
         self.totalRecord = 0
         # 每页数据数
-        self.pageRecord = 5
+        self.pageRecord = 10
         self.setUpUI()
 
     def setUpUI(self):
