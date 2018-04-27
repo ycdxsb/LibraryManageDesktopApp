@@ -86,8 +86,8 @@ class SignInWidget(QWidget):
         self.Vlayout.addWidget(self.widget, Qt.AlignTop)
 
         self.signIn.clicked.connect(self.signInCheck)
-        self.lineEdit2.returnPressed.connect(self.signInCheck)
-        self.lineEdit1.returnPressed.connect(self.signInCheck)
+        #self.lineEdit2.returnPressed.connect(self.signInCheck)
+        #self.lineEdit1.returnPressed.connect(self.signInCheck)
 
     def signInCheck(self):
         studentId = self.lineEdit1.text()
@@ -100,7 +100,7 @@ class SignInWidget(QWidget):
         db.setDatabaseName('./db/LibraryManagement.db')
         db.open()
         query = QSqlQuery()
-        sql = "SELECT * FROM user WHERE user.StudentId='%s'" % (studentId)
+        sql = "SELECT * FROM user WHERE StudentId='%s'" % (studentId)
         query.exec_(sql)
         db.close()
 
@@ -110,7 +110,6 @@ class SignInWidget(QWidget):
             print(QMessageBox.information(self, "提示", "该账号不存在!", QMessageBox.Yes, QMessageBox.Yes))
         else:
             if (studentId == query.value(0) and hl.hexdigest() == query.value(2)):
-                # print("正确")
                 # 如果是管理员
                 if (query.value(3)==1):
                     self.is_admin_signal.emit()

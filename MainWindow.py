@@ -59,11 +59,9 @@ class Main(QMainWindow):
 
     def menuTriggered(self, q):
         if(q.text()=="修改密码"):
-            changePswdDialog=changePasswordDialog(self)
-            changePswdDialog.show()
-            changePswdDialog.exec_()
-            return
-
+            changePsdDialog=changePasswordDialog(self)
+            changePsdDialog.show()
+            changePsdDialog.exec_()
         if (q.text() == "注册"):
             sip.delete(self.widget)
             self.widget = SignUpWidget()
