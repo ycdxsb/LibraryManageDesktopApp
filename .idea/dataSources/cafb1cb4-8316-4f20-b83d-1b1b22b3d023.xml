@@ -111,7 +111,6 @@
     <index id="30" parent="8" name="sqlite_autoindex_User_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>StudentId</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="31" parent="8">
@@ -144,7 +143,6 @@
     <index id="37" parent="9" name="sqlite_autoindex_User_Book_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>StudentId</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="38" parent="9">
