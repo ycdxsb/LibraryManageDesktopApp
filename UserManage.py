@@ -5,20 +5,21 @@ from PyQt5.QtCore import *
 import qdarkstyle
 from PyQt5.QtSql import *
 import time
+import sip
 
-class UserManage(QWidget):
-    def __init__(self):
-        super(UserManage, self).__init__()
-        self.resize(280, 500)
+class UserManage(QDialog):
+    def __init__(self,parent=None):
+        super(UserManage, self).__init__(parent)
+        self.resize(280, 400)
         self.layout = QVBoxLayout()
         self.setLayout(self.layout)
+        self.setWindowTitle("管理用户")
         # 用户数
         self.userCount = 0
         self.oldDeleteId = ""
         self.oldDeleteName = ""
         self.deleteId = ""
         self.deleteName = ""
-        self.model = QSqlQueryModel
         self.setUpUI()
 
     def setUpUI(self):
@@ -45,15 +46,15 @@ class UserManage(QWidget):
         self.deleteUserButton = QPushButton("删 除 用 户")
         hlayout = QHBoxLayout()
         hlayout.addWidget(self.deleteUserButton, Qt.AlignHCenter)
-        widget = QWidget()
-        widget.setLayout(hlayout)
-        widget.setFixedHeight(48)
+        self.widget = QWidget()
+        self.widget.setLayout(hlayout)
+        self.widget.setFixedHeight(48)
         font = QFont()
         font.setPixelSize(15)
         self.deleteUserButton.setFixedHeight(36)
         self.deleteUserButton.setFixedWidth(180)
         self.deleteUserButton.setFont(font)
-        self.layout.addWidget(widget, Qt.AlignCenter)
+        self.layout.addWidget(self.widget, Qt.AlignCenter)
         # 设置信号
         self.deleteUserButton.clicked.connect(self.deleteUser)
         self.tableWidget.itemClicked.connect(self.getStudentInfo)
@@ -122,8 +123,45 @@ class UserManage(QWidget):
         sql="UPDATE User_Book SET ReturnTime='%s',BorrowState=0 WHERE StudentId='%s' AND BorrowState=1"%(timenow,self.deleteId)
         self.query.exec_(sql)
         self.db.commit()
+        print(QMessageBox.information(self,"提醒","删除用户成功!",QMessageBox.Yes,QMessageBox.Yes))
+        self.updateUI()
         return
 
+    def updateUI(self):
+        self.getResult()
+        self.layout.removeWidget(self.widget)
+        self.layout.removeWidget(self.tableWidget)
+        sip.delete(self.widget)
+        sip.delete(self.tableWidget)
+        # 表格设置
+        self.tableWidget = QTableWidget()
+        self.tableWidget.setRowCount(self.userCount)
+        self.tableWidget.setColumnCount(2)
+        self.tableWidget.setHorizontalHeaderLabels(['学号', '姓名'])
+        # 不可编辑
+        self.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        # 标题可拉伸
+        self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # 整行选中
+        self.tableWidget.setSelectionBehavior(QAbstractItemView.SelectRows)
+
+        self.layout.addWidget(self.tableWidget)
+        self.setRows()
+        self.deleteUserButton = QPushButton("删 除 用 户")
+        hlayout = QHBoxLayout()
+        hlayout.addWidget(self.deleteUserButton, Qt.AlignHCenter)
+        self.widget = QWidget()
+        self.widget.setLayout(hlayout)
+        self.widget.setFixedHeight(48)
+        font = QFont()
+        font.setPixelSize(15)
+        self.deleteUserButton.setFixedHeight(36)
+        self.deleteUserButton.setFixedWidth(180)
+        self.deleteUserButton.setFont(font)
+        self.layout.addWidget(self.widget, Qt.AlignCenter)
+        # 设置信号
+        self.deleteUserButton.clicked.connect(self.deleteUser)
+        self.tableWidget.itemClicked.connect(self.getStudentInfo)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
