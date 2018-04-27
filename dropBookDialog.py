@@ -24,7 +24,7 @@ class dropBookDialog(QDialog):
         self.setLayout(self.layout)
 
         # Label控件
-        self.titlelabel = QLabel("  添加书籍")
+        self.titlelabel = QLabel("  淘汰书籍")
         self.bookNameLabel = QLabel("书    名:")
         self.bookIdLabel = QLabel("书    号:")
         self.authNameLabel = QLabel("作    者:")
@@ -80,13 +80,18 @@ class dropBookDialog(QDialog):
 
         self.bookNameEdit.setFont(font)
         self.bookNameEdit.setReadOnly(True)
+        self.bookNameEdit.setStyleSheet("background-color:#363636")
         self.bookIdEdit.setFont(font)
         self.authNameEdit.setFont(font)
         self.authNameEdit.setReadOnly(True)
+        self.authNameEdit.setStyleSheet("background-color:#363636")
         self.publisherEdit.setFont(font)
         self.publisherEdit.setReadOnly(True)
+        self.publisherEdit.setStyleSheet("background-color:#363636")
         self.publishTime.setFont(font)
+        self.publishTime.setStyleSheet("background-color:#363636")
         self.categoryComboBox.setFont(font)
+        self.categoryComboBox.setStyleSheet("background-color:#363636")
         self.dropNumEdit.setFont(font)
 
         # button设置

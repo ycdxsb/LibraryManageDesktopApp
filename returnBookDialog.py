@@ -80,13 +80,18 @@ class returnBookDialog(QDialog):
 
         self.bookNameEdit.setFont(font)
         self.bookNameEdit.setReadOnly(True)
+        self.bookNameEdit.setStyleSheet("background-color:#363636")
         self.bookIdEdit.setFont(font)
         self.authNameEdit.setFont(font)
         self.authNameEdit.setReadOnly(True)
+        self.authNameEdit.setStyleSheet("background-color:#363636")
         self.publisherEdit.setFont(font)
         self.publisherEdit.setReadOnly(True)
+        self.publisherEdit.setStyleSheet("background-color:#363636")
         self.publishTime.setFont(font)
+        self.publishTime.setStyleSheet("background-color:#363636")
         self.categoryComboBox.setFont(font)
+        self.categoryComboBox.setStyleSheet("background-color:#363636")
 
         # button设置
         font.setPixelSize(16)

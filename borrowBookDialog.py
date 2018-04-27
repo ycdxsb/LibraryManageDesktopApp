@@ -80,13 +80,18 @@ class borrowBookDialog(QDialog):
 
         self.bookNameEdit.setFont(font)
         self.bookNameEdit.setReadOnly(True)
+        self.bookNameEdit.setStyleSheet("background-color:#363636")
         self.bookIdEdit.setFont(font)
         self.authNameEdit.setFont(font)
         self.authNameEdit.setReadOnly(True)
+        self.authNameEdit.setStyleSheet("background-color:#363636")
         self.publisherEdit.setFont(font)
         self.publisherEdit.setReadOnly(True)
+        self.publisherEdit.setStyleSheet("background-color:#363636")
         self.publishTime.setFont(font)
+        self.publishTime.setStyleSheet("background-color:#363636")
         self.categoryComboBox.setFont(font)
+        self.categoryComboBox.setStyleSheet("background-color:#363636")
 
         # button设置
         font.setPixelSize(16)
@@ -99,6 +104,7 @@ class borrowBookDialog(QDialog):
         self.layout.setVerticalSpacing(10)
         self.borrowBookButton.clicked.connect(self.borrowButtonClicked)
         self.bookIdEdit.textChanged.connect(self.bookIdEditChanged)
+        self.bookIdEdit.returnPressed.connect(self.borrowButtonClicked)
 
     def borrowButtonClicked(self):
         # 获取书号，书号为空或不存在库中，则弹出错误
