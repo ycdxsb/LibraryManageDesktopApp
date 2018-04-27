@@ -137,17 +137,6 @@ class BookStorageViewer(QWidget):
     # 分页记录查询
     def recordQuery(self, index):
         queryCondition = ""
-        if (self.searchEdit.text() == ""):
-            queryCondition = "select * from Book"
-            self.queryModel.setQuery(queryCondition)
-            self.totalRecord = self.queryModel.rowCount()
-            self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
-            label = "/" + str(int(self.totalPage)) + "页"
-            self.pageLabel.setText(label)
-            queryCondition = ("select * from Book limit %d,%d " % (index, self.pageRecord))
-            self.queryModel.setQuery(queryCondition)
-            self.setButtonStatus()
-            return
         conditionChoice = self.condisionComboBox.currentText()
         if (conditionChoice == "按书名查询"):
             conditionChoice = 'BookName'
@@ -158,14 +147,27 @@ class BookStorageViewer(QWidget):
         elif (conditionChoice == '按分类查询'):
             conditionChoice = 'Category'
         else:
-            conditionChoice = 'publisher'
+            conditionChoice = 'Publisher'
+
+        if (self.searchEdit.text() == ""):
+            queryCondition = "select * from Book"
+            self.queryModel.setQuery(queryCondition)
+            self.totalRecord = self.queryModel.rowCount()
+            self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
+            label = "/" + str(int(self.totalPage)) + "页"
+            self.pageLabel.setText(label)
+            queryCondition = ("select * from Book ORDER BY %s DESC limit %d,%d " % (conditionChoice,index, self.pageRecord))
+            self.queryModel.setQuery(queryCondition)
+            self.setButtonStatus()
+            return
+
         # 得到模糊查询条件
         temp = self.searchEdit.text()
         s = '%'
         for i in range(0, len(temp)):
             s = s + temp[i] + "%"
-        queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s'" % (
-            conditionChoice, s))
+        queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s' ORDER BY %s DESC" % (
+            conditionChoice, s,conditionChoice))
         self.queryModel.setQuery(queryCondition)
         self.totalRecord = self.queryModel.rowCount()
         # 当查询无记录时的操作
@@ -177,15 +179,15 @@ class BookStorageViewer(QWidget):
             self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
             label = "/" + str(int(self.totalPage)) + "页"
             self.pageLabel.setText(label)
-            queryCondition = ("select * from Book limit %d,%d " % (index, self.pageRecord))
+            queryCondition = ("select * from Book ORDER BY %s limit %d,%d " % (conditionChoice,index, self.pageRecord))
             self.queryModel.setQuery(queryCondition)
             self.setButtonStatus()
             return
         self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
         label = "/" + str(int(self.totalPage)) + "页"
         self.pageLabel.setText(label)
-        queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s' LIMIT %d,%d " % (
-            conditionChoice, s, index, self.pageRecord))
+        queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s' ORDER BY %s LIMIT %d,%d " % (
+            conditionChoice, s, conditionChoice,index, self.pageRecord))
         self.queryModel.setQuery(queryCondition)
         self.setButtonStatus()
         return

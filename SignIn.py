@@ -112,7 +112,7 @@ class SignInWidget(QWidget):
             if (studentId == query.value(0) and hl.hexdigest() == query.value(2)):
                 # print("正确")
                 # 如果是管理员
-                if (studentId == "0000000000"):
+                if (query.value(3)==1):
                     self.is_admin_signal.emit()
                 else:
                     self.is_student_signal.emit(studentId)
