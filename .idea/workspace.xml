@@ -101,8 +101,8 @@
       <file leaf-file-name="MainWindow.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+            <state relative-caret-position="339">
+              <caret line="102" column="57" lean-forward="true" selection-start-line="102" selection-start-column="57" selection-end-line="102" selection-end-column="57" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -630,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524845268716</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="v1.1 I am tired">
+      <created>1524848464592</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1524848464592</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
@@ -699,7 +706,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add dropBookDialog and BookStorageViewer to AdminHome" />
     <MESSAGE value="fixed the bug of search" />
     <MESSAGE value="begin to write StudentHome and borrowBookDialog" />
     <MESSAGE value="finish borrowBookDialog" />
@@ -724,7 +730,8 @@
     <MESSAGE value="add stylesheet" />
     <MESSAGE value="add order in BookStorageViewer" />
     <MESSAGE value="begin to write changePasswordDialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="begin to write changePasswordDialog" />
+    <MESSAGE value="v1.1 I am tired" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1 I am tired" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1073,8 +1080,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+        <state relative-caret-position="339">
+          <caret line="102" column="57" lean-forward="true" selection-start-line="102" selection-start-column="57" selection-end-line="102" selection-end-column="57" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
