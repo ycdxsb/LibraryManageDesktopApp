@@ -158,6 +158,7 @@ class dropBookDialog(QDialog):
         query.exec_(sql)
         db.commit()
         print(QMessageBox.information(self, "提示", "淘汰书籍成功!", QMessageBox.Yes, QMessageBox.Yes))
+        self.close()
         return
 
 

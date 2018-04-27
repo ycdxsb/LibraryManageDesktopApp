@@ -98,7 +98,7 @@ class BookStorageViewer(QWidget):
         self.queryModel.setHeaderData(5, Qt.Horizontal, "出版时间")
         self.queryModel.setHeaderData(6, Qt.Horizontal, "库存")
         self.queryModel.setHeaderData(7, Qt.Horizontal, "剩余可借")
-        self.queryModel.setHeaderData(8, Qt.Horizontal, "已借")
+        self.queryModel.setHeaderData(8, Qt.Horizontal, "总借阅次数")
 
         self.layout.addLayout(self.Hlayout1)
         self.layout.addWidget(self.tableView)

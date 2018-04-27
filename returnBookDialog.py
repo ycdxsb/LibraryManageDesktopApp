@@ -133,6 +133,7 @@ class returnBookDialog(QDialog):
         query.exec_(sql)
         db.commit()
         print(QMessageBox.information(self, "提示", "归还成功!", QMessageBox.Yes, QMessageBox.Yes))
+        self.close()
         return
 
     def bookIdEditChanged(self):

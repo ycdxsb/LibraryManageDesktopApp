@@ -111,6 +111,7 @@
     <index id="30" parent="8" name="sqlite_autoindex_User_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>StudentId</ColNames>
+      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="31" parent="8">
@@ -140,32 +141,23 @@
       <DataType>BIT|0</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <index id="37" parent="9" name="sqlite_autoindex_User_Book_1">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>StudentId</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="38" parent="9">
-      <ColNames>StudentId</ColNames>
-      <UnderlyingIndexName>sqlite_autoindex_User_Book_1</UnderlyingIndexName>
-    </key>
-    <column id="39" parent="10" name="type">
+    <column id="37" parent="10" name="type">
       <Position>1</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="40" parent="10" name="name">
+    <column id="38" parent="10" name="name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="41" parent="10" name="tbl_name">
+    <column id="39" parent="10" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="42" parent="10" name="rootpage">
+    <column id="40" parent="10" name="rootpage">
       <Position>4</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="43" parent="10" name="sql">
+    <column id="41" parent="10" name="sql">
       <Position>5</Position>
       <DataType>text|0</DataType>
     </column>

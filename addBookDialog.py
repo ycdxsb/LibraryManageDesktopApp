@@ -133,6 +133,7 @@ class addBookDialog(QDialog):
             query.exec_(sql)
             db.commit()
             print(QMessageBox.information(self, "提示", "添加书籍成功!", QMessageBox.Yes, QMessageBox.Yes))
+            self.close()
             self.clearEdit()
         return
 

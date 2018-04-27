@@ -130,9 +130,11 @@ class borrowBookDialog(QDialog):
         # 插入User_Book表
         timenow = time.strftime('%Y-%m-%d', time.localtime(time.time()))
         sql="INSERT INTO User_Book VALUES ('%s','%s','%s',NULL,1)" %(self.studentId,BookId,timenow)
+        print(sql)
         query.exec_(sql)
         db.commit()
         print(QMessageBox.information(self,"提示","借阅成功!",QMessageBox.Yes,QMessageBox.Yes))
+        self.close()
         return
 
 
