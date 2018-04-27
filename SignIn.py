@@ -86,8 +86,8 @@ class SignInWidget(QWidget):
         self.Vlayout.addWidget(self.widget, Qt.AlignTop)
 
         self.signIn.clicked.connect(self.signInCheck)
-        #self.lineEdit2.returnPressed.connect(self.signInCheck)
-        #self.lineEdit1.returnPressed.connect(self.signInCheck)
+        self.lineEdit2.returnPressed.connect(self.signInCheck)
+        self.lineEdit1.returnPressed.connect(self.signInCheck)
 
     def signInCheck(self):
         studentId = self.lineEdit1.text()
