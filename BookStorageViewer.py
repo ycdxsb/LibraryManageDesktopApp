@@ -156,7 +156,7 @@ class BookStorageViewer(QWidget):
             self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
             label = "/" + str(int(self.totalPage)) + "页"
             self.pageLabel.setText(label)
-            queryCondition = ("select * from Book ORDER BY %s DESC limit %d,%d " % (conditionChoice,index, self.pageRecord))
+            queryCondition = ("select * from Book ORDER BY %s  limit %d,%d " % (conditionChoice,index, self.pageRecord))
             self.queryModel.setQuery(queryCondition)
             self.setButtonStatus()
             return
@@ -166,7 +166,7 @@ class BookStorageViewer(QWidget):
         s = '%'
         for i in range(0, len(temp)):
             s = s + temp[i] + "%"
-        queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s' ORDER BY %s DESC" % (
+        queryCondition = ("SELECT * FROM Book WHERE %s LIKE '%s' ORDER BY %s " % (
             conditionChoice, s,conditionChoice))
         self.queryModel.setQuery(queryCondition)
         self.totalRecord = self.queryModel.rowCount()
@@ -179,7 +179,7 @@ class BookStorageViewer(QWidget):
             self.totalPage = int((self.totalRecord + self.pageRecord - 1) / self.pageRecord)
             label = "/" + str(int(self.totalPage)) + "页"
             self.pageLabel.setText(label)
-            queryCondition = ("select * from Book ORDER BY %s limit %d,%d " % (conditionChoice,index, self.pageRecord))
+            queryCondition = ("select * from Book ORDER BY %s  limit %d,%d " % (conditionChoice,index, self.pageRecord))
             self.queryModel.setQuery(queryCondition)
             self.setButtonStatus()
             return
