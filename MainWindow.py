@@ -66,7 +66,7 @@ class Main(QMainWindow):
             sip.delete(self.widget)
             self.widget = SignUpWidget()
             self.setCentralWidget(self.widget)
-            self.widget.student_signin_signal[str].connect(self.studentSignIn)
+            self.widget.student_signup_signal[str].connect(self.studentSignIn)
             self.signUpAction.setEnabled(False)
             self.changePasswordAction.setEnabled(True)
             self.signInAction.setEnabled(True)
