@@ -146,8 +146,8 @@ class dropBookDialog(QDialog):
         sql = "SELECT * FROM Book WHERE BookId='%s'" % (bookId)
         query.exec_(sql)
         if (query.next()):
-            if (dropNum > query.value(6) or dropNum < 0):
-                print(QMessageBox.warning(self, "警告", "库存数目为%d本，请检查输入" % (query.value(6)), QMessageBox.Yes,
+            if (dropNum > query.value(7) or dropNum < 0):
+                print(QMessageBox.warning(self, "警告", "最多可淘汰%d本，请检查输入" % (query.value(7)), QMessageBox.Yes,
                                           QMessageBox.Yes))
                 return
         # 更新Book表和BuyorDrop表
