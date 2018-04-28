@@ -8,6 +8,8 @@ from PyQt5.QtSql import *
 
 
 class borrowBookDialog(QDialog):
+    borrow_book_success_signal = pyqtSignal()
+
     def __init__(self, StudentId, parent=None):
         super(borrowBookDialog, self).__init__(parent)
         self.studentId = StudentId
@@ -128,7 +130,7 @@ class borrowBookDialog(QDialog):
 
         # 借书上限5本
         sql = "SELECT COUNT(StudentId) FROM User_Book WHERE StudentId='%s' AND BorrowState=1" % (
-        self.studentId)
+            self.studentId)
         query.exec_(sql)
         if (query.next()):
             borrowNum = query.value(0)
@@ -136,10 +138,11 @@ class borrowBookDialog(QDialog):
                 QMessageBox.warning(self, "警告", "您借阅的书达到上限（5本）,借书失败！", QMessageBox.Yes, QMessageBox.Yes)
                 return
         # 不允许重复借书
-        sql="SELECT COUNT(StudentId) FROM User_Book WHERE  StudentId='%s' AND BookId='%s' AND BorrowState=1"%(self.studentId,BookId)
+        sql = "SELECT COUNT(StudentId) FROM User_Book WHERE  StudentId='%s' AND BookId='%s' AND BorrowState=1" % (
+        self.studentId, BookId)
         query.exec_(sql)
-        if(query.next() and query.value(0)):
-            QMessageBox.warning(self,"警告","您已经借阅了本书并尚未归还，借阅失败！",QMessageBox.Yes,QMessageBox.Yes)
+        if (query.next() and query.value(0)):
+            QMessageBox.warning(self, "警告", "您已经借阅了本书并尚未归还，借阅失败！", QMessageBox.Yes, QMessageBox.Yes)
             return
         # 更新User表
         sql = "UPDATE User SET TimesBorrowed=TimesBorrowed+1,NumBorrowed=NumBorrowed+1 WHERE StudentId='%s'" % self.studentId
@@ -156,6 +159,7 @@ class borrowBookDialog(QDialog):
         query.exec_(sql)
         db.commit()
         print(QMessageBox.information(self, "提示", "借阅成功!", QMessageBox.Yes, QMessageBox.Yes))
+        self.borrow_book_success_signal.emit()
         self.close()
         return
 

@@ -48,7 +48,7 @@ class StudentHome(QWidget):
         self.allBookButton.setFont(font)
 
         self.storageView = BookStorageViewer()
-
+        self.borrowStatusView=BorrowStatusViewer(self.StudentId)
         self.allBookButton.setEnabled(False)
 
         self.layout.addLayout(self.buttonLayout)
@@ -59,19 +59,25 @@ class StudentHome(QWidget):
         self.allBookButton.clicked.connect(self.allBookButtonClicked)
 
     def borrowBookButtonClicked(self):
-        borrowDialog = borrowBookDialog(self.StudentId)
+        borrowDialog = borrowBookDialog(self.StudentId,self)
+        borrowDialog.borrow_book_success_signal.connect(self.borrowStatusView.borrowedQuery)
+        borrowDialog.borrow_book_success_signal.connect(self.storageView.searchButtonClicked)
         borrowDialog.show()
         borrowDialog.exec_()
         return
 
     def returnBookButtonClicked(self):
-        returnDialog = returnBookDialog(self.StudentId)
+        returnDialog = returnBookDialog(self.StudentId,self)
+        returnDialog.return_book_success_signal.connect(self.borrowStatusView.returnedQuery)
+        returnDialog.return_book_success_signal.connect(self.borrowStatusView.borrowedQuery)
+        returnDialog.return_book_success_signal.connect(self.storageView.searchButtonClicked)
         returnDialog.show()
         returnDialog.exec_()
 
     def myBookStatusClicked(self):
         self.layout.removeWidget(self.storageView)
         sip.delete(self.storageView)
+        self.storageView = BookStorageViewer()
         self.borrowStatusView = BorrowStatusViewer(self.StudentId)
         self.layout.addWidget(self.borrowStatusView)
         self.allBookButton.setEnabled(True)
@@ -81,6 +87,7 @@ class StudentHome(QWidget):
     def allBookButtonClicked(self):
         self.layout.removeWidget(self.borrowStatusView)
         sip.delete(self.borrowStatusView)
+        self.borrowStatusView = BorrowStatusViewer(self.StudentId)
         self.storageView = BookStorageViewer()
         self.layout.addWidget(self.storageView)
         self.allBookButton.setEnabled(False)

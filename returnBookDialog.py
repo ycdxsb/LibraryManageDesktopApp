@@ -8,6 +8,7 @@ from PyQt5.QtSql import *
 
 
 class returnBookDialog(QDialog):
+    return_book_success_signal=pyqtSignal()
     def __init__(self, StudentId, parent=None):
         super(returnBookDialog, self).__init__(parent)
         self.studentId = StudentId
@@ -138,6 +139,7 @@ class returnBookDialog(QDialog):
         query.exec_(sql)
         db.commit()
         print(QMessageBox.information(self, "提示", "归还成功!", QMessageBox.Yes, QMessageBox.Yes))
+        self.return_book_success_signal.emit()
         self.close()
         return
 
