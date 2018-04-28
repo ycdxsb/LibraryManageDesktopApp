@@ -125,6 +125,22 @@ class borrowBookDialog(QDialog):
         if (not query.next()):
             print(QMessageBox.warning(self, "警告", "你所要借的书不存在，请查看输入", QMessageBox.Yes, QMessageBox.Yes))
             return
+
+        # 借书上限5本
+        sql = "SELECT COUNT(StudentId) FROM User_Book WHERE StudentId='%s' AND BorrowState=1" % (
+        self.studentId)
+        query.exec_(sql)
+        if (query.next()):
+            borrowNum = query.value(0)
+            if (borrowNum == 5):
+                QMessageBox.warning(self, "警告", "您借阅的书达到上限（5本）,借书失败！", QMessageBox.Yes, QMessageBox.Yes)
+                return
+        # 不允许重复借书
+        sql="SELECT COUNT(StudentId) FROM User_Book WHERE  StudentId='%s' AND BookId='%s' AND BorrowState=1"%(self.studentId,BookId)
+        query.exec_(sql)
+        if(query.next() and query.value(0)):
+            QMessageBox.warning(self,"警告","您已经借阅了本书并尚未归还，借阅失败！",QMessageBox.Yes,QMessageBox.Yes)
+            return
         # 更新User表
         sql = "UPDATE User SET TimesBorrowed=TimesBorrowed+1,NumBorrowed=NumBorrowed+1 WHERE StudentId='%s'" % self.studentId
         query.exec_(sql)
@@ -135,14 +151,13 @@ class borrowBookDialog(QDialog):
         db.commit()
         # 插入User_Book表
         timenow = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-        sql="INSERT INTO User_Book VALUES ('%s','%s','%s',NULL,1)" %(self.studentId,BookId,timenow)
+        sql = "INSERT INTO User_Book VALUES ('%s','%s','%s',NULL,1)" % (self.studentId, BookId, timenow)
         print(sql)
         query.exec_(sql)
         db.commit()
-        print(QMessageBox.information(self,"提示","借阅成功!",QMessageBox.Yes,QMessageBox.Yes))
+        print(QMessageBox.information(self, "提示", "借阅成功!", QMessageBox.Yes, QMessageBox.Yes))
         self.close()
         return
-
 
     def bookIdEditChanged(self):
         bookId = self.bookIdEdit.text()
