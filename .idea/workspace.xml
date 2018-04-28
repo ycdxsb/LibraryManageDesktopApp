@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="54810fbf-eac4-4027-bd22-6f879414be51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/borrowBookDialog.py" afterPath="$PROJECT_DIR$/borrowBookDialog.py" />
+      <change beforePath="$PROJECT_DIR$/AdminHome.py" afterPath="$PROJECT_DIR$/AdminHome.py" />
+      <change beforePath="$PROJECT_DIR$/SignIn.py" afterPath="$PROJECT_DIR$/SignIn.py" />
+      <change beforePath="$PROJECT_DIR$/addBookDialog.py" afterPath="$PROJECT_DIR$/addBookDialog.py" />
       <change beforePath="$PROJECT_DIR$/db/LibraryManagement.db" afterPath="$PROJECT_DIR$/db/LibraryManagement.db" />
+      <change beforePath="$PROJECT_DIR$/dropBookDialog.py" afterPath="$PROJECT_DIR$/dropBookDialog.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,21 +19,21 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Library$SignUp.coverage" NAME="SignUp Coverage Results" MODIFIED="1524849098698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$SignIn.coverage" NAME="SignIn Coverage Results" MODIFIED="1524848165484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Library$StudentHome.coverage" NAME="StudentHome Coverage Results" MODIFIED="1524887953953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$StudentHome.coverage" NAME="StudentHome Coverage Results" MODIFIED="1524889319085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$dropBookDialog.coverage" NAME="dropBookDialog Coverage Results" MODIFIED="1524841937925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Library$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1524888354344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1524891345793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$BookStorage.coverage" NAME="BookStorage Coverage Results" MODIFIED="1524110075888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Library$changePasswordDialog.coverage" NAME="changePasswordDialog Coverage Results" MODIFIED="1524848135273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$BorrowStatusViewer.coverage" NAME="BorrowStatusViewer Coverage Results" MODIFIED="1524399897531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Library$UserManage.coverage" NAME="UserManage Coverage Results" MODIFIED="1524841012584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$UserManage.coverage" NAME="UserManage Coverage Results" MODIFIED="1524889305595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$returnBookDialog.coverage" NAME="returnBookDialog Coverage Results" MODIFIED="1524842035206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$LibraryManagement.coverage" NAME="LibraryManagement Coverage Results" MODIFIED="1523878806296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$test.coverage" NAME="test Coverage Results" MODIFIED="1524376112580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$borrowBookDialog.coverage" NAME="borrowBookDialog Coverage Results" MODIFIED="1524887976263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$BookStorageViewer__1_.coverage" NAME="BookStorageViewer (1) Coverage Results" MODIFIED="1524153309266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Library$addBookDialog.coverage" NAME="addBookDialog Coverage Results" MODIFIED="1524844504294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$addBookDialog.coverage" NAME="addBookDialog Coverage Results" MODIFIED="1524891460211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$SignUpWidget.coverage" NAME="SignUpWidget Coverage Results" MODIFIED="1523929455538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Library$AdminHome.coverage" NAME="AdminHome Coverage Results" MODIFIED="1524840934292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$AdminHome.coverage" NAME="AdminHome Coverage Results" MODIFIED="1524891808491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$BookStorageViewer.coverage" NAME="BookStorageViewer Coverage Results" MODIFIED="1524843009375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -65,31 +68,88 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="borrowBookDialog.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/borrowBookDialog.py">
+      <file leaf-file-name="MainWindow.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="130" column="23" lean-forward="true" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
+            <state relative-caret-position="-294">
+              <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
               <folding>
-                <marker date="1524887953880" expanded="true" signature="4707:4743" ph="SELECT * FRO... Book" />
-                <marker date="1524887953880" expanded="true" signature="4966:5025" ph="SELECT COUNT... User_Book" />
-                <marker date="1524887953880" expanded="true" signature="4966:5043" ph="SELECT COUNT... User_Book" />
-                <marker date="1524887953880" expanded="true" signature="5356:5450" ph="SELECT COUNT... User_Book" />
-                <marker date="1524887953880" expanded="true" signature="5695:5787" ph="UPDATE User... " />
-                <marker date="1524887953880" expanded="true" signature="5884:5971" ph="UPDATE Book... " />
-                <marker date="1524887953880" expanded="true" signature="6138:6190" ph="INSERT INTO User_Book... " />
-                <marker date="1524887953880" expanded="true" signature="6841:6877" ph="SELECT * FRO... Book" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainWindow.py">
+      <file leaf-file-name="addBookDialog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addBookDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="231">
+              <caret line="138" column="47" lean-forward="false" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1524891539312" expanded="true" signature="4605:4641" ph="SELECT * FRO... Book" />
+                <marker date="1524891539312" expanded="true" signature="4737:4824" ph="UPDATE Book... " />
+                <marker date="1524891539312" expanded="true" signature="4923:4986" ph="INSERT INTO book... " />
+                <marker date="1524891539312" expanded="true" signature="5281:5326" ph="INSERT INTO buyordrop... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminHome.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AdminHome.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1029">
+              <caret line="49" column="67" lean-forward="true" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dropBookDialog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dropBookDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="167" column="47" lean-forward="false" selection-start-line="167" selection-start-column="47" selection-end-line="167" selection-end-column="47" />
+              <folding>
+                <marker date="1524891798694" expanded="true" signature="4604:4640" ph="SELECT * FRO... Book" />
+                <marker date="1524891798694" expanded="true" signature="5510:5546" ph="SELECT * FRO... Book" />
+                <marker date="1524891798694" expanded="true" signature="6003:6038" ph="DELETE FROM Book" />
+                <marker date="1524891798694" expanded="true" signature="6084:6171" ph="UPDATE BOOK... " />
+                <marker date="1524891798694" expanded="true" signature="6353:6398" ph="INSERT INTO buyordrop... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookStorageViewer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BookStorageViewer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="191" column="30" lean-forward="true" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
+              <folding>
+                <marker date="1524843009332" expanded="true" signature="4667:4685" ph="SELECT * FRO... Book" />
+                <marker date="1524843009332" expanded="true" signature="5548:5566" ph="select * fro... Book" />
+                <marker date="1524843009332" expanded="true" signature="5902:5947" ph="select * fro... Book" />
+                <marker date="1524843009332" expanded="true" signature="6276:6330" ph="SELECT * FRO... Book" />
+                <marker date="1524843009332" expanded="true" signature="6666:6684" ph="select * fro... Book" />
+                <marker date="1524843009332" expanded="true" signature="7020:7060" ph="select * fro... Book" />
+                <marker date="1524843009332" expanded="true" signature="7423:7482" ph="SELECT * FRO... Book" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignIn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SignIn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-333">
+              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+              <folding>
+                <marker date="1524888640355" expanded="true" signature="3463:3502" ph="SELECT * FRO... user" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,18 +194,18 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/BorrowStatusViewer.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/console.sql" />
-        <option value="$PROJECT_DIR$/addBookDialog.py" />
         <option value="$PROJECT_DIR$/StudentHome.py" />
-        <option value="$PROJECT_DIR$/AdminHome.py" />
         <option value="$PROJECT_DIR$/UserManage.py" />
-        <option value="$PROJECT_DIR$/dropBookDialog.py" />
         <option value="$PROJECT_DIR$/returnBookDialog.py" />
         <option value="$PROJECT_DIR$/BookStorageViewer.py" />
         <option value="$PROJECT_DIR$/changePasswordDialog.py" />
         <option value="$PROJECT_DIR$/MainWindow.py" />
-        <option value="$PROJECT_DIR$/SignIn.py" />
         <option value="$PROJECT_DIR$/SignUp.py" />
         <option value="$PROJECT_DIR$/borrowBookDialog.py" />
+        <option value="$PROJECT_DIR$/SignIn.py" />
+        <option value="$PROJECT_DIR$/addBookDialog.py" />
+        <option value="$PROJECT_DIR$/dropBookDialog.py" />
+        <option value="$PROJECT_DIR$/AdminHome.py" />
       </list>
     </option>
   </component>
@@ -216,7 +276,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MainWindow">
+  <component name="RunManager" selected="Python.AdminHome">
+    <configuration name="AdminHome" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Library" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AdminHome.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="MainWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -231,44 +310,6 @@
       <module name="Library" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainWindow.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="SignIn" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Library" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SignIn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="SignUp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Library" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SignUp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -293,7 +334,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="borrowBookDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="UserManage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -306,7 +347,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Library" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/borrowBookDialog.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UserManage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="addBookDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Library" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/addBookDialog.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,18 +374,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.MainWindow" />
-      <item index="1" class="java.lang.String" itemvalue="Python.SignIn" />
-      <item index="2" class="java.lang.String" itemvalue="Python.SignUp" />
-      <item index="3" class="java.lang.String" itemvalue="Python.borrowBookDialog" />
-      <item index="4" class="java.lang.String" itemvalue="Python.StudentHome" />
+      <item index="1" class="java.lang.String" itemvalue="Python.StudentHome" />
+      <item index="2" class="java.lang.String" itemvalue="Python.UserManage" />
+      <item index="3" class="java.lang.String" itemvalue="Python.AdminHome" />
+      <item index="4" class="java.lang.String" itemvalue="Python.addBookDialog" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.MainWindow" />
-        <item index="1" class="java.lang.String" itemvalue="Python.borrowBookDialog" />
-        <item index="2" class="java.lang.String" itemvalue="Python.StudentHome" />
-        <item index="3" class="java.lang.String" itemvalue="Python.SignUp" />
-        <item index="4" class="java.lang.String" itemvalue="Python.SignIn" />
+        <item index="0" class="java.lang.String" itemvalue="Python.AdminHome" />
+        <item index="1" class="java.lang.String" itemvalue="Python.addBookDialog" />
+        <item index="2" class="java.lang.String" itemvalue="Python.MainWindow" />
+        <item index="3" class="java.lang.String" itemvalue="Python.StudentHome" />
+        <item index="4" class="java.lang.String" itemvalue="Python.UserManage" />
       </list>
     </recent_temporary>
   </component>
@@ -623,7 +683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524849283342</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add borrowbook limit of user">
+      <created>1524888468215</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1524888468216</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView">
@@ -647,7 +714,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.4955654" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16738197" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4688841" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14484979" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -692,7 +759,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="begin to write StudentHome and borrowBookDialog" />
     <MESSAGE value="finish borrowBookDialog" />
     <MESSAGE value="finish returnBookDialog" />
     <MESSAGE value="add returnBookDialog to studentHome" />
@@ -717,7 +783,8 @@
     <MESSAGE value="begin to write changePasswordDialog" />
     <MESSAGE value="v1.1 I am tired" />
     <MESSAGE value="v1.2 perfect" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.2 perfect" />
+    <MESSAGE value="add borrowbook limit of user" />
+    <option name="LAST_COMMIT_MESSAGE" value="add borrowbook limit of user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -726,11 +793,6 @@
           <url>file://$PROJECT_DIR$/changePasswordDialog.py</url>
           <line>96</line>
           <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SignIn.py</url>
-          <line>93</line>
-          <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/SignUp.py</url>
@@ -944,20 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserManage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3087">
-          <caret line="147" column="12" lean-forward="false" selection-start-line="147" selection-start-column="12" selection-end-line="147" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.User_Book">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.sqlite_master">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -965,50 +1013,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.BuyOrDrop">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dropBookDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="160" column="70" lean-forward="false" selection-start-line="160" selection-start-column="70" selection-end-line="160" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BookStorageViewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4011">
-          <caret line="191" column="30" lean-forward="true" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdminHome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.Book">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SignIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-            <marker date="1524848714111" expanded="true" signature="3467:3506" ph="SELECT * FRO... user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1024,21 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.User">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addBookDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="91" column="45" lean-forward="false" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/changePasswordDialog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -1050,14 +1043,6 @@
             <marker date="1524847871875" expanded="true" signature="4398:4455" ph="SELECT * FRO... User" />
             <marker date="1524847871875" expanded="true" signature="5105:5155" ph="UPDATE User... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StudentHome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,18 +1061,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.py">
+    <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.User">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.User_Book">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="302">
+          <caret line="136" column="36" lean-forward="true" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
+          <folding>
+            <marker date="1524840850193" expanded="true" signature="2090:2137" ph="SELECT Stude... User" />
+            <marker date="1524840850193" expanded="true" signature="2280:2327" ph="SELECT Stude... User" />
+            <marker date="1524840850193" expanded="true" signature="4219:4256" ph="DELETE FROM User... " />
+            <marker date="1524840850193" expanded="true" signature="4363:4426" ph="SELECT * FRO... User_Book" />
+            <marker date="1524840850193" expanded="true" signature="4670:4731" ph="UPDATE Book... " />
+            <marker date="1524840850193" expanded="true" signature="4818:4907" ph="UPDATE User_Book... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/borrowBookDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="130" column="23" lean-forward="true" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
+        <state relative-caret-position="2415">
+          <caret line="121" column="13" lean-forward="true" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
           <folding>
             <marker date="1524887953880" expanded="true" signature="4707:4743" ph="SELECT * FRO... Book" />
             <marker date="1524887953880" expanded="true" signature="4966:5025" ph="SELECT COUNT... User_Book" />
@@ -1097,6 +1103,95 @@
             <marker date="1524887953880" expanded="true" signature="5884:5971" ph="UPDATE Book... " />
             <marker date="1524887953880" expanded="true" signature="6138:6190" ph="INSERT INTO User_Book... " />
             <marker date="1524887953880" expanded="true" signature="6841:6877" ph="SELECT * FRO... Book" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/d59bbc2/cafb1cb4-8316-4f20-b83d-1b1b22b3d023/main.BuyOrDrop">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentHome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="81" column="25" lean-forward="false" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-294">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addBookDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="138" column="47" lean-forward="false" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1524891539312" expanded="true" signature="4605:4641" ph="SELECT * FRO... Book" />
+            <marker date="1524891539312" expanded="true" signature="4737:4824" ph="UPDATE Book... " />
+            <marker date="1524891539312" expanded="true" signature="4923:4986" ph="INSERT INTO book... " />
+            <marker date="1524891539312" expanded="true" signature="5281:5326" ph="INSERT INTO buyordrop... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SignIn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <marker date="1524888640355" expanded="true" signature="3463:3502" ph="SELECT * FRO... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookStorageViewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="191" column="30" lean-forward="true" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
+          <folding>
+            <marker date="1524843009332" expanded="true" signature="4667:4685" ph="SELECT * FRO... Book" />
+            <marker date="1524843009332" expanded="true" signature="5548:5566" ph="select * fro... Book" />
+            <marker date="1524843009332" expanded="true" signature="5902:5947" ph="select * fro... Book" />
+            <marker date="1524843009332" expanded="true" signature="6276:6330" ph="SELECT * FRO... Book" />
+            <marker date="1524843009332" expanded="true" signature="6666:6684" ph="select * fro... Book" />
+            <marker date="1524843009332" expanded="true" signature="7020:7060" ph="select * fro... Book" />
+            <marker date="1524843009332" expanded="true" signature="7423:7482" ph="SELECT * FRO... Book" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dropBookDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="167" column="47" lean-forward="false" selection-start-line="167" selection-start-column="47" selection-end-line="167" selection-end-column="47" />
+          <folding>
+            <marker date="1524891798694" expanded="true" signature="4604:4640" ph="SELECT * FRO... Book" />
+            <marker date="1524891798694" expanded="true" signature="5510:5546" ph="SELECT * FRO... Book" />
+            <marker date="1524891798694" expanded="true" signature="6003:6038" ph="DELETE FROM Book" />
+            <marker date="1524891798694" expanded="true" signature="6084:6171" ph="UPDATE BOOK... " />
+            <marker date="1524891798694" expanded="true" signature="6353:6398" ph="INSERT INTO buyordrop... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdminHome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="49" column="67" lean-forward="true" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

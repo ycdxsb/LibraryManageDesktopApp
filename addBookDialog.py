@@ -6,7 +6,10 @@ import qdarkstyle
 import time
 from PyQt5.QtSql import *
 
+
 class addBookDialog(QDialog):
+    add_book_success_signal = pyqtSignal()
+
     def __init__(self, parent=None):
         super(addBookDialog, self).__init__(parent)
         self.setUpUI()
@@ -121,10 +124,10 @@ class addBookDialog(QDialog):
             query.exec_(sql)
             if (query.next()):
                 sql = "UPDATE Book SET NumStorage=NumStorage+%d,NumCanBorrow=NumCanBorrow+%d WHERE BookId='%s'" % (
-                        addBookNum, addBookNum, bookId)
+                    addBookNum, addBookNum, bookId)
             else:
                 sql = "INSERT INTO book VALUES ('%s','%s','%s','%s','%s','%s',%d,%d,0)" % (
-                        bookName, bookId, authName, bookCategory, publisher, publishTime, addBookNum, addBookNum)
+                    bookName, bookId, authName, bookCategory, publisher, publishTime, addBookNum, addBookNum)
             query.exec_(sql)
             db.commit()
             # 插入droporinsert表
@@ -133,6 +136,7 @@ class addBookDialog(QDialog):
             query.exec_(sql)
             db.commit()
             print(QMessageBox.information(self, "提示", "添加书籍成功!", QMessageBox.Yes, QMessageBox.Yes))
+            self.add_book_success_signal.emit()
             self.close()
             self.clearEdit()
         return

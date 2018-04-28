@@ -8,6 +8,8 @@ import time
 
 
 class dropBookDialog(QDialog):
+    drop_book_successful_signal=pyqtSignal()
+
     def __init__(self, parent=None):
         super(dropBookDialog, self).__init__(parent)
         self.setUpUI()
@@ -151,7 +153,7 @@ class dropBookDialog(QDialog):
         # 更新Book表和BuyorDrop表
         # 如果drop书目和当前库存相同，则直接删除Book记录（这里先默认当前所有书都在库存中）
         if (dropNum == query.value(6)):
-            sql = "DELETE * FROM Book WHERE BookId='%s'" % (bookId)
+            sql = "DELETE  FROM Book WHERE BookId='%s'" % (bookId)
         else:
             sql = "UPDATE BOOK SET NumStorage=NumStorage-%d,NumCanBorrow=NumCanBorrow-%d WHERE BookId='%s'" % (
                 dropNum, dropNum, bookId)
@@ -163,6 +165,7 @@ class dropBookDialog(QDialog):
         query.exec_(sql)
         db.commit()
         print(QMessageBox.information(self, "提示", "淘汰书籍成功!", QMessageBox.Yes, QMessageBox.Yes))
+        self.drop_book_successful_signal.emit()
         self.close()
         return
 

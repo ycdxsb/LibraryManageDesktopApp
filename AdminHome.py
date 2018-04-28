@@ -47,11 +47,13 @@ class AdminHome(QWidget):
 
     def addBookButtonClicked(self):
         addDialog = addBookDialog(self)
+        addDialog.add_book_success_signal.connect(self.storageView.searchButtonClicked)
         addDialog.show()
         addDialog.exec_()
 
     def dropBookButtonClicked(self):
         dropDialog = dropBookDialog(self)
+        dropDialog.drop_book_successful_signal.connect(self.storageView.searchButtonClicked)
         dropDialog.show()
         dropDialog.exec_()
 

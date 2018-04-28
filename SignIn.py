@@ -66,7 +66,7 @@ class SignInWidget(QWidget):
         self.signIn.setFont(labelFont)
         self.formlayout.addRow("", self.signIn)
 
-        self.label = QLabel("欢迎使用USTC图书馆管理系统")
+        self.label = QLabel("欢迎使用图书馆管理系统")
         fontlabel = QFont()
         fontlabel.setPixelSize(30)
         self.label.setFixedWidth(390)
