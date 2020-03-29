@@ -12,7 +12,9 @@
 [CSDN专栏链接](https://blog.csdn.net/column/details/22222.html)：https://blog.csdn.net/column/details/22222.html
 
 PS: 我看到很多人在问管理员密码是什么，统一回答一下
+
 更新了数据库
+
 目前存在两个用户
-管理员用户：账号:PB00000000，密码：admin
-学生  用户：账号:PB15000000，密码：student
+- 管理员用户：账号:PB00000000，密码：admin
+- 学生  用户：账号:PB15000000，密码：student
