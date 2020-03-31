@@ -17,4 +17,4 @@
 - 管理员用户：账号:PB00000000，密码：admin
 - 学生  用户：账号:PB15000000，密码：student
 
-20200330：已弃用CSDN，博客移动至[我的博客](http://blog.ycdhub.com/)或者[Github Pages](https://ycdxsb.github.io/)
+20200330：已弃用CSDN，博客移动至[我的博客](http://blog.ycdxsb.cn/)或者[Github Pages](https://ycdxsb.github.io/)
